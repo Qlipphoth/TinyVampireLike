@@ -1,0 +1,1360 @@
+fileFormatVersion: 2
+guid: 9f2959c7bbb6ab7439ed347a718c1709
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3301723577448011057
+    second: monster_05_brood_0
+  - first:
+      213: -3989379300873358494
+    second: monster_05_brood_1
+  - first:
+      213: 8568554070642847587
+    second: monster_05_brood_2
+  - first:
+      213: -841817132595916324
+    second: monster_05_brood_3
+  - first:
+      213: 1067870451237286294
+    second: monster_05_brood_4
+  - first:
+      213: -1049170666857042740
+    second: monster_05_brood_5
+  - first:
+      213: -6410948917175438575
+    second: monster_05_brood_6
+  - first:
+      213: 5868185938262666084
+    second: monster_05_brood_7
+  - first:
+      213: 2158054799402094474
+    second: monster_05_brood_8
+  - first:
+      213: 2901279503529348320
+    second: monster_05_brood_9
+  - first:
+      213: 6220759102392444212
+    second: monster_05_brood_10
+  - first:
+      213: -1899218855482205359
+    second: monster_05_brood_11
+  - first:
+      213: -7816014400803684757
+    second: monster_05_brood_12
+  - first:
+      213: 1445238056947715826
+    second: monster_05_brood_13
+  - first:
+      213: -1273483856963510084
+    second: monster_05_brood_14
+  - first:
+      213: -1371040352754548317
+    second: monster_05_brood_15
+  - first:
+      213: -2021923011641785404
+    second: monster_05_brood_16
+  - first:
+      213: -2902802004222288067
+    second: monster_05_brood_17
+  - first:
+      213: -7329553369596496938
+    second: monster_05_brood_18
+  - first:
+      213: 3307751632536217847
+    second: monster_05_brood_19
+  - first:
+      213: -4818456754350988039
+    second: monster_05_brood_20
+  - first:
+      213: 7606393296252225089
+    second: monster_05_brood_21
+  - first:
+      213: 274430966630482952
+    second: monster_05_brood_22
+  - first:
+      213: 967219886454423185
+    second: monster_05_brood_23
+  - first:
+      213: 22391836663992453
+    second: monster_05_brood_24
+  - first:
+      213: -5393730642106245403
+    second: monster_05_brood_25
+  - first:
+      213: -814160269736546039
+    second: monster_05_brood_26
+  - first:
+      213: -2814739997837797366
+    second: monster_05_brood_27
+  - first:
+      213: 7702170459940666327
+    second: monster_05_brood_28
+  - first:
+      213: 1474302854033356190
+    second: monster_05_brood_29
+  - first:
+      213: -2016218402914239524
+    second: monster_05_brood_30
+  - first:
+      213: 2024507461756940151
+    second: monster_05_brood_31
+  - first:
+      213: -326982230066869034
+    second: monster_05_brood_32
+  - first:
+      213: 1748957325352035173
+    second: monster_05_brood_33
+  - first:
+      213: 9043310957521664834
+    second: monster_05_brood_34
+  - first:
+      213: 3291512068616625403
+    second: monster_05_brood_35
+  - first:
+      213: -3657193251542714553
+    second: monster_05_brood_36
+  - first:
+      213: -6877104144088039411
+    second: monster_05_brood_37
+  - first:
+      213: -1646467167132921777
+    second: monster_05_brood_38
+  - first:
+      213: 9083766042960287214
+    second: monster_05_brood_39
+  - first:
+      213: 4375431130837431967
+    second: monster_05_brood_40
+  - first:
+      213: -7147006708286832511
+    second: monster_05_brood_41
+  - first:
+      213: 8749197522530477128
+    second: monster_05_brood_42
+  - first:
+      213: 8329665594269120964
+    second: monster_05_brood_43
+  - first:
+      213: -4997801427307116240
+    second: monster_05_brood_44
+  - first:
+      213: -3019937789687339173
+    second: monster_05_brood_45
+  - first:
+      213: -8958315865748488891
+    second: monster_05_brood_46
+  - first:
+      213: -7315314384126523869
+    second: monster_05_brood_47
+  - first:
+      213: 7716311523652660720
+    second: monster_05_brood_48
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monster_05_brood_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcaedab46ebed22d0800000000000000
+      internalID: -3301723577448011057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263b52999a0e2a8c0800000000000000
+      internalID: -3989379300873358494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36fe463778e99e670800000000000000
+      internalID: 8568554070642847587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd158cd27c34154f0800000000000000
+      internalID: -841817132595916324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69172208486d1de00800000000000000
+      internalID: 1067870451237286294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccce93556d89071f0800000000000000
+      internalID: -1049170666857042740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113359e2debb707a0800000000000000
+      internalID: -6410948917175438575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46ba616150cff6150800000000000000
+      internalID: 5868185938262666084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_8
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f403cf763f2fd10800000000000000
+      internalID: 2158054799402094474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec0df9365a634820800000000000000
+      internalID: 2901279503529348320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 100
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4352163d173945650800000000000000
+      internalID: 6220759102392444212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b5240738e94a5e0800000000000000
+      internalID: -1899218855482205359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_12
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e32c04050f78390800000000000000
+      internalID: -7816014400803684757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_13
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe8e380b548e0410800000000000000
+      internalID: 1445238056947715826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0ee76ed2da35ee0800000000000000
+      internalID: -1273483856963510084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_15
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1c651301619fce0800000000000000
+      internalID: -1371040352754548317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_16
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c347e7cbbfa0f3e0800000000000000
+      internalID: -2021923011641785404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_17
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fd905f4fc27b7d0800000000000000
+      internalID: -2902802004222288067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_18
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3fee24b02384a90800000000000000
+      internalID: -7329553369596496938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_19
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 75
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f82a86a59e77ed20800000000000000
+      internalID: 3307751632536217847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4e3577c17612db0800000000000000
+      internalID: -4818456754350988039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_21
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146c60d07665f8960800000000000000
+      internalID: 7606393296252225089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_22
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80480699289fec300800000000000000
+      internalID: 274430966630482952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_23
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e3fc7bc514c6d00800000000000000
+      internalID: 967219886454423185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_24
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580d93eb14d8f4000800000000000000
+      internalID: 22391836663992453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_25
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee1e17ee8e9525b0800000000000000
+      internalID: -5393730642106245403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_26
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901fd1c5c8583b4f0800000000000000
+      internalID: -814160269736546039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_27
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 50
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a085bc592e800f8d0800000000000000
+      internalID: -2814739997837797366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7db3548b93b93ea60800000000000000
+      internalID: 7702170459940666327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_29
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95b00272a6c57410800000000000000
+      internalID: 1474302854033356190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_30
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdbf0b08b04f404e0800000000000000
+      internalID: -2016218402914239524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_31
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f66276fce781c10800000000000000
+      internalID: 2024507461756940151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_32
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dccff8e463567bf0800000000000000
+      internalID: -326982230066869034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_33
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563ece8cb6b854810800000000000000
+      internalID: 1748957325352035173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_34
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bf970076b408d70800000000000000
+      internalID: 9043310957521664834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_35
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc1ec789cccdad20800000000000000
+      internalID: 3291512068616625403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_36
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 25
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74737d64d1a0f3dc0800000000000000
+      internalID: -3657193251542714553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d000448a73e9f80a0800000000000000
+      internalID: -6877104144088039411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_38
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40d2b8b5d29629e0800000000000000
+      internalID: -1646467167132921777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_39
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee557659615001e70800000000000000
+      internalID: 9083766042960287214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_40
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9630c47e67a8bc30800000000000000
+      internalID: 4375431130837431967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_41
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180ca39e34bb0dc90800000000000000
+      internalID: -7147006708286832511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_42
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8442820aac46b6970800000000000000
+      internalID: 8749197522530477128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_43
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9343cb9bae89370800000000000000
+      internalID: 8329665594269120964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_44
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0394b63d41e34aab0800000000000000
+      internalID: -4997801427307116240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_45
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5768e1a4960716d0800000000000000
+      internalID: -3019937789687339173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_46
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54db05cee2bada380800000000000000
+      internalID: -8958315865748488891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_47
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32645d96358ca7a90800000000000000
+      internalID: -7315314384126523869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_05_brood_48
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fde19fa278d51b60800000000000000
+      internalID: 7716311523652660720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      monster_05_brood_0: -3301723577448011057
+      monster_05_brood_1: -3989379300873358494
+      monster_05_brood_10: 6220759102392444212
+      monster_05_brood_11: -1899218855482205359
+      monster_05_brood_12: -7816014400803684757
+      monster_05_brood_13: 1445238056947715826
+      monster_05_brood_14: -1273483856963510084
+      monster_05_brood_15: -1371040352754548317
+      monster_05_brood_16: -2021923011641785404
+      monster_05_brood_17: -2902802004222288067
+      monster_05_brood_18: -7329553369596496938
+      monster_05_brood_19: 3307751632536217847
+      monster_05_brood_2: 8568554070642847587
+      monster_05_brood_20: -4818456754350988039
+      monster_05_brood_21: 7606393296252225089
+      monster_05_brood_22: 274430966630482952
+      monster_05_brood_23: 967219886454423185
+      monster_05_brood_24: 22391836663992453
+      monster_05_brood_25: -5393730642106245403
+      monster_05_brood_26: -814160269736546039
+      monster_05_brood_27: -2814739997837797366
+      monster_05_brood_28: 7702170459940666327
+      monster_05_brood_29: 1474302854033356190
+      monster_05_brood_3: -841817132595916324
+      monster_05_brood_30: -2016218402914239524
+      monster_05_brood_31: 2024507461756940151
+      monster_05_brood_32: -326982230066869034
+      monster_05_brood_33: 1748957325352035173
+      monster_05_brood_34: 9043310957521664834
+      monster_05_brood_35: 3291512068616625403
+      monster_05_brood_36: -3657193251542714553
+      monster_05_brood_37: -6877104144088039411
+      monster_05_brood_38: -1646467167132921777
+      monster_05_brood_39: 9083766042960287214
+      monster_05_brood_4: 1067870451237286294
+      monster_05_brood_40: 4375431130837431967
+      monster_05_brood_41: -7147006708286832511
+      monster_05_brood_42: 8749197522530477128
+      monster_05_brood_43: 8329665594269120964
+      monster_05_brood_44: -4997801427307116240
+      monster_05_brood_45: -3019937789687339173
+      monster_05_brood_46: -8958315865748488891
+      monster_05_brood_47: -7315314384126523869
+      monster_05_brood_48: 7716311523652660720
+      monster_05_brood_5: -1049170666857042740
+      monster_05_brood_6: -6410948917175438575
+      monster_05_brood_7: 5868185938262666084
+      monster_05_brood_8: 2158054799402094474
+      monster_05_brood_9: 2901279503529348320
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

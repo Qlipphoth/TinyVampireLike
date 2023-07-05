@@ -1,0 +1,1435 @@
+fileFormatVersion: 2
+guid: f139166ccb10d3646a354be1b317cfbe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4859722140919353979
+    second: monster_02_0
+  - first:
+      213: -6032730100895900246
+    second: monster_02_1
+  - first:
+      213: 8242161973860845828
+    second: monster_02_2
+  - first:
+      213: -3104494460184171958
+    second: monster_02_3
+  - first:
+      213: -4509328027497523759
+    second: monster_02_4
+  - first:
+      213: -8217549836001358094
+    second: monster_02_5
+  - first:
+      213: 858476142378517680
+    second: monster_02_6
+  - first:
+      213: 2617023352238997994
+    second: monster_02_7
+  - first:
+      213: 3277815594788347644
+    second: monster_02_8
+  - first:
+      213: -8549470220251250909
+    second: monster_02_9
+  - first:
+      213: -8348049249107124608
+    second: monster_02_10
+  - first:
+      213: 8254197501551040898
+    second: monster_02_11
+  - first:
+      213: 8036174143513915536
+    second: monster_02_12
+  - first:
+      213: -4595754153824096751
+    second: monster_02_13
+  - first:
+      213: 7230635041709626721
+    second: monster_02_14
+  - first:
+      213: 979743635548472782
+    second: monster_02_15
+  - first:
+      213: -9104591663530955813
+    second: monster_02_16
+  - first:
+      213: -2858189868372350288
+    second: monster_02_17
+  - first:
+      213: -4374434007373712730
+    second: monster_02_18
+  - first:
+      213: -1045837409496590680
+    second: monster_02_19
+  - first:
+      213: 7201434922985098000
+    second: monster_02_20
+  - first:
+      213: 3958438841523354473
+    second: monster_02_21
+  - first:
+      213: -4061692190301714339
+    second: monster_02_22
+  - first:
+      213: 3546077300062759212
+    second: monster_02_23
+  - first:
+      213: 123943437265734665
+    second: monster_02_24
+  - first:
+      213: 9032927544755827235
+    second: monster_02_25
+  - first:
+      213: 3799183708549595277
+    second: monster_02_26
+  - first:
+      213: -8917418178630677397
+    second: monster_02_27
+  - first:
+      213: 5042922508383826662
+    second: monster_02_28
+  - first:
+      213: 113110195981584681
+    second: monster_02_29
+  - first:
+      213: 7715374871853581659
+    second: monster_02_30
+  - first:
+      213: 8012567304424626326
+    second: monster_02_31
+  - first:
+      213: 8495210104978117228
+    second: monster_02_32
+  - first:
+      213: -385488531783989357
+    second: monster_02_33
+  - first:
+      213: 2359995368709994063
+    second: monster_02_34
+  - first:
+      213: -2390212483849537809
+    second: monster_02_35
+  - first:
+      213: -3704986289740639927
+    second: monster_02_36
+  - first:
+      213: 6175564171061489461
+    second: monster_02_37
+  - first:
+      213: -4541667227943922430
+    second: monster_02_38
+  - first:
+      213: -4059907830119447812
+    second: monster_02_39
+  - first:
+      213: -7639406049814700081
+    second: monster_02_40
+  - first:
+      213: 4202248610979305230
+    second: monster_02_41
+  - first:
+      213: -6151850194547908302
+    second: monster_02_42
+  - first:
+      213: -9018275466597200009
+    second: monster_02_43
+  - first:
+      213: -4678574990060666032
+    second: monster_02_44
+  - first:
+      213: 178960078961283329
+    second: monster_02_45
+  - first:
+      213: -3051222539718730656
+    second: monster_02_46
+  - first:
+      213: -4807866214829522198
+    second: monster_02_47
+  - first:
+      213: -74389150549174846
+    second: monster_02_48
+  - first:
+      213: -5149483834608921846
+    second: monster_02_49
+  - first:
+      213: 2002296828905372914
+    second: monster_02_50
+  - first:
+      213: 6574683621503841620
+    second: monster_02_51
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monster_02_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72599c0a83317340800000000000000
+      internalID: 4859722140919353979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_1
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad1b4e9fef674ca0800000000000000
+      internalID: -6032730100895900246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409453975aa026270800000000000000
+      internalID: 8242161973860845828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4aed8d9cbe9ae4d0800000000000000
+      internalID: -3104494460184171958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_4
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d51c49ec06ab61c0800000000000000
+      internalID: -4509328027497523759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_5
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fec11d66f565fd80800000000000000
+      internalID: -8217549836001358094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_6
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b48e9ac08be9eb00800000000000000
+      internalID: 858476142378517680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_7
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae18b1f8fd8815420800000000000000
+      internalID: 2617023352238997994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_8
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe5896bae32d7d20800000000000000
+      internalID: 3277815594788347644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_9
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fb428b12e2a5980800000000000000
+      internalID: -8549470220251250909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_10
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ed0831075c52c80800000000000000
+      internalID: -8348049249107124608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_11
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289ddd125eccc8270800000000000000
+      internalID: 8254197501551040898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_12
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09073595ec9368f60800000000000000
+      internalID: 8036174143513915536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_13
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ee94a42f99830c0800000000000000
+      internalID: -4595754153824096751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_14
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1651899c240685460800000000000000
+      internalID: 7230635041709626721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_15
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 184
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec501d745afb89d00800000000000000
+      internalID: 979743635548472782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb2146ce1ef5a180800000000000000
+      internalID: -9104591663530955813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_17
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 138
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0baab03457ba558d0800000000000000
+      internalID: -2858189868372350288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_18
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 138
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2f9117273ea43c0800000000000000
+      internalID: -4374434007373712730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_19
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 138
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a6142aca607c71f0800000000000000
+      internalID: -1045837409496590680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_20
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 138
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b8e9958e2a0f360800000000000000
+      internalID: 7201434922985098000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bbb1657233fe630800000000000000
+      internalID: 3958438841523354473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_22
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5886120978f1a7c0800000000000000
+      internalID: -4061692190301714339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_23
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2921583482363130800000000000000
+      internalID: 3546077300062759212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_24
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c077646e558b100800000000000000
+      internalID: 123943437265734665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_25
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32233035eb76b5d70800000000000000
+      internalID: 9032927544755827235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_26
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80cc88347969b430800000000000000
+      internalID: 3799183708549595277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_27
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c8b1db967fe3480800000000000000
+      internalID: -8917418178630677397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_28
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e23a068d4f0cf540800000000000000
+      internalID: 5042922508383826662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_29
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92905fbbf19d19100800000000000000
+      internalID: 113110195981584681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_30
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b55cec17194821b60800000000000000
+      internalID: 7715374871853581659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_31
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698932fc28b523f60800000000000000
+      internalID: 8012567304424626326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_32
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 92
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c629787b49c05e570800000000000000
+      internalID: 8495210104978117228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3974706093876aaf0800000000000000
+      internalID: -385488531783989357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_34
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46b687b84360c020800000000000000
+      internalID: 2359995368709994063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_35
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6b17ae86244ded0800000000000000
+      internalID: -2390212483849537809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_36
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941115e699e359cc0800000000000000
+      internalID: -3704986289740639927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_37
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fefbfd4e204b550800000000000000
+      internalID: 6175564171061489461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_38
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2059e5e08b1c8f0c0800000000000000
+      internalID: -4541667227943922430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_39
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf247ecb65f48a7c0800000000000000
+      internalID: -4059907830119447812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_40
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf13d94ca06bf590800000000000000
+      internalID: -7639406049814700081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_41
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07dc43e8d2615a30800000000000000
+      internalID: 4202248610979305230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_42
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231ed8a87dc30aaa0800000000000000
+      internalID: -6151850194547908302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_43
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f8ad67e36a8d280800000000000000
+      internalID: -9018275466597200009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_44
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 46
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053486ea5dc521fb0800000000000000
+      internalID: -4678574990060666032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101967f5e3bcb7200800000000000000
+      internalID: 178960078961283329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_46
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06c56652441e7a5d0800000000000000
+      internalID: -3051222539718730656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_47
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae20c799627074db0800000000000000
+      internalID: -4807866214829522198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_48
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c59f523677b7fef0800000000000000
+      internalID: -74389150549174846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_49
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03d48d4cbb5988b0800000000000000
+      internalID: -5149483834608921846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_50
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcbbc57b5699cb10800000000000000
+      internalID: 2002296828905372914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster_02_51
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 43
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455b05a6be7fd3b50800000000000000
+      internalID: 6574683621503841620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      monster_02_0: 4859722140919353979
+      monster_02_1: -6032730100895900246
+      monster_02_10: -8348049249107124608
+      monster_02_11: 8254197501551040898
+      monster_02_12: 8036174143513915536
+      monster_02_13: -4595754153824096751
+      monster_02_14: 7230635041709626721
+      monster_02_15: 979743635548472782
+      monster_02_16: -9104591663530955813
+      monster_02_17: -2858189868372350288
+      monster_02_18: -4374434007373712730
+      monster_02_19: -1045837409496590680
+      monster_02_2: 8242161973860845828
+      monster_02_20: 7201434922985098000
+      monster_02_21: 3958438841523354473
+      monster_02_22: -4061692190301714339
+      monster_02_23: 3546077300062759212
+      monster_02_24: 123943437265734665
+      monster_02_25: 9032927544755827235
+      monster_02_26: 3799183708549595277
+      monster_02_27: -8917418178630677397
+      monster_02_28: 5042922508383826662
+      monster_02_29: 113110195981584681
+      monster_02_3: -3104494460184171958
+      monster_02_30: 7715374871853581659
+      monster_02_31: 8012567304424626326
+      monster_02_32: 8495210104978117228
+      monster_02_33: -385488531783989357
+      monster_02_34: 2359995368709994063
+      monster_02_35: -2390212483849537809
+      monster_02_36: -3704986289740639927
+      monster_02_37: 6175564171061489461
+      monster_02_38: -4541667227943922430
+      monster_02_39: -4059907830119447812
+      monster_02_4: -4509328027497523759
+      monster_02_40: -7639406049814700081
+      monster_02_41: 4202248610979305230
+      monster_02_42: -6151850194547908302
+      monster_02_43: -9018275466597200009
+      monster_02_44: -4678574990060666032
+      monster_02_45: 178960078961283329
+      monster_02_46: -3051222539718730656
+      monster_02_47: -4807866214829522198
+      monster_02_48: -74389150549174846
+      monster_02_49: -5149483834608921846
+      monster_02_5: -8217549836001358094
+      monster_02_50: 2002296828905372914
+      monster_02_51: 6574683621503841620
+      monster_02_6: 858476142378517680
+      monster_02_7: 2617023352238997994
+      monster_02_8: 3277815594788347644
+      monster_02_9: -8549470220251250909
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
