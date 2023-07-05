@@ -39,6 +39,7 @@ public class EnemyController : Character
     protected override void OnEnable() {
         base.OnEnable();
 
+        rigidbody2D.drag = 100f;
         enemyIsDead = false;
         // spriteRenderer.color = Color.white;  // 无效
 
@@ -59,6 +60,7 @@ public class EnemyController : Character
 
     public override void Die() {
         enemyIsDead = true;
+        rigidbody2D.drag = 5f;
         EnemyManager.Instance.RemoveEnemy(gameObject);
         StopCoroutine(nameof(MoveCoroutine));
         StartCoroutine(DieCoroutine());

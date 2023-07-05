@@ -9,17 +9,13 @@ public class WaveManager : PersistentSingleton<WaveManager>
     [SerializeField] TMP_Text waveNumText;
     [SerializeField] TMP_Text waveTimerText;
 
-    int waveNum, waveTimer;
+    [Header("Wave Settings")]
+    [SerializeField] int waveNum, waveTimer;
+    
     WaitForSeconds waitForOneSecond = new WaitForSeconds(1f);
 
-    protected override void Awake() {
-        base.Awake();
-        waveNum = 0;
-        waveTimer = 10;
-    }
-
     private void OnEnable() {
-        waveNumText.text = ($"Wave {++waveNum}").ToString();
+        waveNumText.text = ($"Wave {waveNum++}").ToString();
         waveTimerText.text = waveTimer.ToString();
         StartCoroutine(nameof(WaveTimer));
     }

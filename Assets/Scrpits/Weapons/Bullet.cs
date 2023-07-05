@@ -8,9 +8,13 @@ public class Bullet : MonoBehaviour
 
     [Header("Bullet Settings")]
     [SerializeField] float speed = 10f;
-    [SerializeField] GameObject explosionPrefab;
     [SerializeField] float ActivateTime = 3f;
     [SerializeField] float criticalRate = 0.1f;
+
+    [Header("VFXs")]
+    [SerializeField] GameObject explosionPrefab;
+    [SerializeField] GameObject hitPrefab;
+
 
     [Header("Popup Text")]
     [SerializeField] GameObject popupTextPrefab;
@@ -34,12 +38,16 @@ public class Bullet : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        PoolManager.Release(explosionPrefab, transform.position, Quaternion.identity);
+        Vector2 hitPoint = other.GetContact(0).point;
+        Vector2 hitNormal = other.GetContact(0).normal;
+        
+        PoolManager.Release(explosionPrefab, hitPoint, Quaternion.identity);
+         
         if (other.gameObject.TryGetComponent<EnemyController>(out EnemyController enemy)) {
             
-            popupText = PoolManager.Release(popupTextPrefab, enemy.transform.position, 
+            popupText = PoolManager.Release(popupTextPrefab, hitPoint, 
                     Quaternion.identity).GetComponentInChildren<PopupText_Ani>();
-            
+
             if (Random.Range(0f, 1f) < criticalRate) {
                 float curDamage = damage * Random.Range(1.5f, 2f);
                 enemy.TakeDamage(curDamage);
@@ -49,7 +57,11 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(damage);
                 popupText.SetText((int)damage, false);
             }
-            // enemy.TakeDamage(damage);
+            
+            float angle = Mathf.Atan2(hitNormal.y, hitNormal.x) * Mathf.Rad2Deg;
+            PoolManager.Release(hitPrefab, hitPoint, 
+                Quaternion.Euler(0f, 0f, angle + 180f));
+
         }
         gameObject.SetActive(false);
     }
