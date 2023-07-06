@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 5b165ecc66971c348bab47024f88a2af, type: 2}
+  m_Material: {fileID: 2100000, guid: 44cc442006c709f4bb11343324d41efc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -220,7 +220,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 872644089
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -259,8 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28dcdb13038a871448cb6e7693c247c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fillImageBack: {fileID: 0}
-  fillImageFront: {fileID: 0}
+  fillImageBack: {fileID: 3331531999121527982}
+  fillImageFront: {fileID: 3331532000120364845}
   fillSpeed: 0.2
   delayFill: 1
   fillDelay: 0.5
