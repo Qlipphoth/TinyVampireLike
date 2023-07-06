@@ -9,7 +9,7 @@ public class PoolManager : MonoBehaviour
     // [SerializeField] Pool[] enemyProjectilePools;
     [SerializeField] Pool[] vFXPools;
     [SerializeField] Pool[] textPools;
-    // [SerializeField] Pool[] lootItemPools;
+    [SerializeField] Pool[] lootsPools;
     static Dictionary<GameObject, Pool> prefab2Pool;  // prefab 到对应 pool 的映射
 
     private void Awake() {
@@ -19,7 +19,7 @@ public class PoolManager : MonoBehaviour
         // Initialize(enemyProjectilePools);
         Initialize(textPools);
         Initialize(vFXPools);
-        // Initialize(lootItemPools);
+        Initialize(lootsPools);
     }
 
     #if UNITY_EDITOR
@@ -30,7 +30,7 @@ public class PoolManager : MonoBehaviour
             checkPoolSize(textPools);
             // checkPoolSize(enemyProjectilePools);
             checkPoolSize(vFXPools);
-            // checkPoolSize(lootItemPools);
+            checkPoolSize(lootsPools);
         }
     #endif
 

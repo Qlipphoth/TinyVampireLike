@@ -178,7 +178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 836831599687755159}
   - component: {fileID: 8800295591284723983}
-  - component: {fileID: 1362096391}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -223,25 +222,10 @@ MonoBehaviour:
   shellPoint: {fileID: 5499213983659100565}
   fireRate: 0.5
   damage: 5
+  gunRange: 2.5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
   fireAudio:
     audioClip: {fileID: 8300000, guid: be86fb8d074d30245a2e0e1a4aafc965, type: 3}
     volume: 0.1
---- !u!58 &1362096391
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8263691487791098045}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.5

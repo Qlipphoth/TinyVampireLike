@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player : Character
 {
+    [Header("HUD")]
+    [SerializeField] StatesBar hudHP;
+
     [Header("Input")]
     [SerializeField] PlayerInput input;
 
@@ -12,11 +15,16 @@ public class Player : Character
     [SerializeField] float accelerationTime = 3f;
     [SerializeField] float decelerationTime = 3f;
     
+    [Header("Player Stats")]
+    [SerializeField] float pickUpRange = 2.5f;
+    [SerializeField] LayerMask pickUpLayerMask;
+
     Vector2 curVelocity;
     float elapsedTime;
 
     Coroutine moveCoroutine;
     WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
+    Collider2D[] colliders; 
 
     protected override void Awake() {
         base.Awake();
@@ -24,6 +32,11 @@ public class Player : Character
 
     private void Start() {
         input.EnableGameplayInput();
+        TakeDamage(10f);
+    }
+
+    private void Update() {
+        PickUp();
     }
 
     protected override void OnEnable() {
@@ -72,10 +85,24 @@ public class Player : Character
 
 #endregion
 
-#region Fire
+#region PickUp
 
+    void PickUp() {
+        colliders = Physics2D.OverlapCircleAll(transform.position, pickUpRange, pickUpLayerMask);
+        if (colliders.Length > 0) {
+            foreach (Collider2D collider in colliders) {
+                if (collider.gameObject.TryGetComponent(out LootItem lootItem)) {
+                    lootItem.StartCoroutine(nameof(lootItem.MoveCoroutine));
+                }
+            }
+        }
+    }
 
+    private void OnDrawGizmosSelected() {
+        Gizmos.DrawWireSphere(transform.position, pickUpRange);
+    }
 
 #endregion
+
 
 }

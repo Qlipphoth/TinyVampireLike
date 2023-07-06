@@ -6552,7 +6552,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_307
+      name: EXPBarFull_1
       rect:
         serializedVersion: 2
         x: 633
@@ -11662,7 +11662,6 @@ TextureImporter:
       All_304: -168562207
       All_305: -1888870036
       All_306: -1038650138
-      All_307: 1011123805
       All_308: -1129285990
       All_309: -2030588269
       All_31: -1368679185
@@ -11969,6 +11968,7 @@ TextureImporter:
       All_97: 704480779
       All_98: -1405212112
       All_99: 1264561308
+      EXPBarFull_1: 1011123805
       HealthBarEmpty_1: -837921734
       HealthBarEmpty_2: -1969925429
       HealthBarFull_1: -1271252959

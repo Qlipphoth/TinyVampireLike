@@ -19,6 +19,7 @@ public class Gun : MonoBehaviour
     [Header("Weapon stats")]
     [SerializeField] float fireRate = 1f;  // 射速
     [SerializeField] float damage;  // 设置子弹伤害
+    [SerializeField] float gunRange = 5f;  // 射程
     [SerializeField] LayerMask enemyLayer;  // 敌人层
 
     [Header("Audio")]
@@ -30,12 +31,10 @@ public class Gun : MonoBehaviour
     GameObject bulletObject;
     Bullet bullet;
     Collider2D[] colliders;
-    CircleCollider2D gunRange;
     float fireTimer;
 
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
-        gunRange = GetComponent<CircleCollider2D>();
         waitForFireInterval = new WaitForSeconds(fireRate);
     }
 
@@ -93,7 +92,7 @@ public class Gun : MonoBehaviour
     }
 
     void AutoFollowenemy() {
-        colliders = Physics2D.OverlapCircleAll(transform.position, gunRange.radius, enemyLayer);
+        colliders = Physics2D.OverlapCircleAll(transform.position, gunRange, enemyLayer);
         if (colliders.Length == 0) {
             transform.right = Vector2.right;  // 朝向右边
             return;
@@ -109,5 +108,9 @@ public class Gun : MonoBehaviour
             }
         }
     }
+
+    // private void OnDrawGizmosSelected() {
+    //     Gizmos.DrawWireSphere(transform.position, gunRange);
+    // }
 
 }

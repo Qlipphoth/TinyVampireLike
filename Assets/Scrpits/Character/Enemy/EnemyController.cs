@@ -14,13 +14,14 @@ public class EnemyController : Character
     [SerializeField] LayerMask raycastLayerMask;
     [SerializeField] bool enemyIsDead = false;
 
-    protected GameObject target;
+    LootSpawner lootSpawner;
     new CircleCollider2D collider2D;
 
     WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
     WaitForSeconds waitForDie = new WaitForSeconds(1f);
     WaitUntil waitUntilPathNotBlocked, waitUntilEnemyIsDead;
     
+    protected GameObject target;
     Coroutine moveCoroutine;
     Ray ray;
     bool isBlocked;
@@ -30,6 +31,8 @@ public class EnemyController : Character
     protected override void Awake() {
         base.Awake();
         collider2D = GetComponent<CircleCollider2D>();
+        lootSpawner = GetComponent<LootSpawner>();
+
         waitUntilPathNotBlocked = new WaitUntil(() => !IsPathBlocked());
         waitUntilEnemyIsDead = new WaitUntil(() => enemyIsDead);
         target = GameObject.FindGameObjectWithTag("Player");
@@ -62,6 +65,9 @@ public class EnemyController : Character
         enemyIsDead = true;
         rigidbody2D.drag = 5f;
         EnemyManager.Instance.RemoveEnemy(gameObject);
+
+        lootSpawner.SpawnLoots(transform.position);
+
         StopCoroutine(nameof(MoveCoroutine));
         StartCoroutine(DieCoroutine());
     }

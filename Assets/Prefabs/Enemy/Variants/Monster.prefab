@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 8365171465541832068}
   - component: {fileID: 8365171465541832069}
   - component: {fileID: 8365171465541832070}
+  - component: {fileID: 8824430355651983000}
   m_Layer: 6
   m_Name: Monster
   m_TagString: Untagged
@@ -540,3 +541,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   enemyIsDead: 0
+--- !u!114 &8824430355651983000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8365171465541832071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b433182655a9a409d83cf3b6bde0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loots:
+  - {fileID: 11400000, guid: 2618ce28823a6b642b9a1902b568e3a3, type: 2}
+  - {fileID: 11400000, guid: 14d0f855d82bd0b4cb0b629691c702b8, type: 2}
+  - {fileID: 11400000, guid: e4daac51f65e7484a85b7a18863390ac, type: 2}
+  - {fileID: 11400000, guid: 478794321c03c57468dda91b6a582e29, type: 2}
+  genRange: 0.2
