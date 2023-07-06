@@ -39,7 +39,6 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) {
         Vector2 hitPoint = other.GetContact(0).point;
-        Vector2 hitNormal = other.GetContact(0).normal;
         
         PoolManager.Release(explosionPrefab, hitPoint, Quaternion.identity);
          
@@ -57,10 +56,9 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(damage);
                 popupText.SetText((int)damage, false);
             }
-            
-            float angle = Mathf.Atan2(hitNormal.y, hitNormal.x) * Mathf.Rad2Deg;
-            PoolManager.Release(hitPrefab, hitPoint, 
-                Quaternion.Euler(0f, 0f, angle + 180f));
+            // 特效的方向直接与运动方向相同就能达到不错的效果，不需要获取碰撞方向
+            float angle = Mathf.Atan2(rigidbody2D.velocity.y, rigidbody2D.velocity.x) * Mathf.Rad2Deg;
+            PoolManager.Release(hitPrefab, enemy.transform.position, Quaternion.Euler(0f, 0f, angle));
 
         }
         gameObject.SetActive(false);

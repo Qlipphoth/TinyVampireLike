@@ -541,6 +541,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   enemyIsDead: 0
+  hitVFX: {fileID: 976469477947047660, guid: 6e7de89e7ab0da2438c738589646aebe, type: 3}
+  hitAudioData:
+    audioClip: {fileID: 8300000, guid: a5ee51ac7d289c94dad493270144657b, type: 3}
+    volume: 0.3
+  shakeTime: 0.1
+  shakeStrength: 0.1
 --- !u!114 &8824430355651983000
 MonoBehaviour:
   m_ObjectHideFlags: 0

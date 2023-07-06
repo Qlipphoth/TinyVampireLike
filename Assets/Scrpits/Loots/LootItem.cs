@@ -25,7 +25,7 @@ public class LootItem : MonoBehaviour
     protected virtual void PickedUp() {
         StopAllCoroutines();
         gameObject.SetActive(false);
-        AudioManager.Instance.PlayRandomSFX(pickUpSFX);
+        AudioManager.Instance.PoolPlayRandomSFX(pickUpSFX);
     }
 
     public IEnumerator MoveCoroutine() {

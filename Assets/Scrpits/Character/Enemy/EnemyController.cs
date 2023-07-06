@@ -14,6 +14,12 @@ public class EnemyController : Character
     [SerializeField] LayerMask raycastLayerMask;
     [SerializeField] bool enemyIsDead = false;
 
+    [Header("Hit")]
+    [SerializeField] GameObject hitVFX;
+    [SerializeField] AudioData hitAudioData; 
+    [SerializeField] float shakeTime;
+    [SerializeField] float shakeStrength;
+
     LootSpawner lootSpawner;
     new CircleCollider2D collider2D;
 
@@ -55,7 +61,13 @@ public class EnemyController : Character
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.TryGetComponent(out Player player)) {
-            TakeDamage(10);
+            player.TakeDamage(1f);
+            AudioManager.Instance.PoolPlayRandomSFX(hitAudioData);
+            // 特效的方向直接与运动方向相同就能达到不错的效果，不需要获取碰撞方向
+            PoolManager.Release(hitVFX, player.transform.position,
+                Quaternion.Euler(0f, 0f, Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg));
+        
+            AttackSense.Instance.CameraShake(shakeTime, shakeStrength);
         }
     }
 

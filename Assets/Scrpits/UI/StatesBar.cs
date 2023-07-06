@@ -7,8 +7,8 @@ using UnityEngine.UI;
 /// </summary>
 public class StatesBar : MonoBehaviour
 {
-    [SerializeField] Image fillImageBack;
-    [SerializeField] Image fillImageFront;
+    [SerializeField] protected Image fillImageBack;
+    [SerializeField] protected Image fillImageFront;
     [SerializeField] float fillSpeed = 0.1f;
     [SerializeField] bool delayFill = true;  // 血条 buffer 是否延迟变化
     [SerializeField] float fillDelay = 0.5f; 
@@ -75,4 +75,11 @@ public class StatesBar : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void EmptyStates() {
+        fillImageBack.fillAmount = 0;
+        fillImageFront.fillAmount = 0;
+        currentFillAmount = 0;
+    }
+
 }

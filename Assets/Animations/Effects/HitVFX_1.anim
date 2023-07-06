@@ -30,8 +30,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.33333334
-        value: 0
+        time: 0.4
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -49,31 +49,31 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 200758157, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.033333335
+    - time: 0.04
       value: {fileID: -1848132068, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.06666667
+    - time: 0.08
       value: {fileID: -1636811853, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.1
+    - time: 0.12
       value: {fileID: -2055573779, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.13333334
+    - time: 0.16
       value: {fileID: -1705275014, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.16666667
-      value: {fileID: 734681070, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
     - time: 0.2
+      value: {fileID: 734681070, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
+    - time: 0.24
       value: {fileID: 1660021403, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.23333333
+    - time: 0.28
       value: {fileID: -958806411, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.26666668
+    - time: 0.32
       value: {fileID: -1552909817, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.3
+    - time: 0.36
       value: {fileID: -717619094, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
-    - time: 0.33333334
+    - time: 0.4
       value: {fileID: -1478991746, guid: 4bd394f7b76462c47933754f3727d5c8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 30
+  m_SampleRate: 25
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -111,7 +111,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.36666667
+    m_StopTime: 0.44
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -140,8 +140,8 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.33333334
-        value: 0
+        time: 0.4
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -159,7 +159,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.33333334
+  - time: 0.4
     functionName: AE_Deactivate
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : Character
 {
     [Header("HUD")]
-    [SerializeField] StatesBar hudHP;
+    [SerializeField] HUDHPBar hudHP;
 
     [Header("Input")]
     [SerializeField] PlayerInput input;
@@ -18,20 +18,29 @@ public class Player : Character
     [Header("Player Stats")]
     [SerializeField] float pickUpRange = 2.5f;
     [SerializeField] LayerMask pickUpLayerMask;
+    
+    [Header("Hurt")]
+    [SerializeField] float mutekiTime = 1f;
+
+    Collider2D playerCollider;
 
     Vector2 curVelocity;
     float elapsedTime;
 
     Coroutine moveCoroutine;
     WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
+    WaitForSeconds waitForMuteki;
     Collider2D[] colliders; 
 
     protected override void Awake() {
         base.Awake();
+        playerCollider = GetComponent<Collider2D>();
+        waitForMuteki = new WaitForSeconds(mutekiTime);
     }
 
     private void Start() {
         input.EnableGameplayInput();
+        hudHP.Initialize(health, maxHealth);
         TakeDamage(10f);
     }
 
@@ -49,6 +58,35 @@ public class Player : Character
         input.OnMoveEvent -= Move;
         input.OnStopMoveEvent -= StopMove;
     }
+
+#region Override
+
+    public override void TakeDamage(float damage) {
+        base.TakeDamage(damage);
+        hudHP.UpdateStates(health, maxHealth);
+
+        if (gameObject.activeSelf) {
+            StartCoroutine(nameof(MutekiCoroutine));
+        }
+
+    }
+
+    public override void Die() {
+        hudHP.UpdateStates(0, maxHealth);
+        base.Die();
+    }
+
+#endregion
+
+#region MuTeKi 
+
+    IEnumerator MutekiCoroutine() {
+        playerCollider.enabled = false;
+        yield return waitForMuteki;
+        playerCollider.enabled = true;
+    }
+
+#endregion
 
 #region Move
 
