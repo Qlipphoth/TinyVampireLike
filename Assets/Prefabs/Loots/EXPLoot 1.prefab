@@ -55,5 +55,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: EXPLoot 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8673415791481071424, guid: 1f31253466ccf3b4aaa77f74061e3ba1, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f31253466ccf3b4aaa77f74061e3ba1, type: 3}
