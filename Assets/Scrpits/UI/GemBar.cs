@@ -9,13 +9,14 @@ public class GemBar : MonoBehaviour
 
     private void Awake() {
         gemNumText = GetComponentInChildren<TMP_Text>();
+        SetGemNum(PlayerAttr.Instance.GemNum);
     }
 
-    private void Start() {
-        SetGemNum(PlayerGem.Instance.gemNum);
+    public IEnumerator UpdateGemNumCoroutine() {
+        SetGemNum(PlayerAttr.Instance.GemNum);
+        yield return null;
     }
 
-    public void SetGemNum(int gemNum) {
-        gemNumText.text = gemNum.ToString();
-    }
+    private void SetGemNum(int gemNum) => gemNumText.text = gemNum.ToString();
+    
 }

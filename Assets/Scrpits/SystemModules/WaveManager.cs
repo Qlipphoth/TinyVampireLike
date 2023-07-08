@@ -15,6 +15,7 @@ public class WaveManager : PersistentSingleton<WaveManager>
     WaitForSeconds waitForOneSecond = new WaitForSeconds(1f);
 
     private void OnEnable() {
+        waveTimer = 30;
         waveNumText.text = ($"Wave {waveNum++}").ToString();
         waveTimerText.text = waveTimer.ToString();
         StartCoroutine(nameof(WaveTimer));
@@ -32,6 +33,12 @@ public class WaveManager : PersistentSingleton<WaveManager>
             waveTimerText.text = waveTimer.ToString();
         }
         EnemyManager.Instance.SlayAll();
+        GameManager.Instance.playerInput.DisableAllInputs();
+        yield return waitForOneSecond;  
+        yield return waitForOneSecond;  
+
+        // TODO: 通关显示
+        GameManager.Instance.OnWaveEnd();
     }
 
 

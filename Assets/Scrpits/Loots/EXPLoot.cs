@@ -7,7 +7,7 @@ public class EXPLoot : LootItem
     [SerializeField] float exp = 8f;  // 提供的经验值
 
     protected override void PickedUp() {
-        StartCoroutine(PlayerGem.Instance.AddGemCoroutine(1));
+        GameManager.Instance.OnGemChangedInGame(Random.Range(1, 4));
         PlayerEXP.Instance.AddEXP(exp);
         base.PickedUp();
     }

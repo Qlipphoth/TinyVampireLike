@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8370999375168190798}
   - component: {fileID: 4597058819325536588}
   m_Layer: 5
-  m_Name: Gem Bar Store
+  m_Name: Gem Bar InStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

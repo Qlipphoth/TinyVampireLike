@@ -220,7 +220,7 @@ MonoBehaviour:
   shellPrefab: {fileID: 5597762272729807094, guid: 7b57d50897121ba45b0bacfe045a75a9, type: 3}
   muzzlePoint: {fileID: 5499213983218052179}
   shellPoint: {fileID: 5499213983659100565}
-  fireRate: 0.5
+  fireRate: 0.3
   damage: 5
   gunRange: 2.5
   enemyLayer:

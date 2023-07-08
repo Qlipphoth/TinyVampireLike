@@ -64,6 +64,7 @@ public class PlayerAttr : Singleton<PlayerAttr>
     public void ChangeDodgeRate(int value) => dodgeRate += value;
     public void ChangeMoveSpeedFactor(int value) => moveSpeedFactor += value;
     public void ChangePickUpRangeFactor(int value) => pickUpRangeFactor += value;
+    public void ChangeGemNum(int value) => gemNum += value;
 
     public delegate void ChangePlayerAttr(int value);
     public static Dictionary<EnumAttrs.PlayerAttrs, ChangePlayerAttr> ChangePlayerAttrFuncDict;

@@ -29,14 +29,18 @@ public class EnemyManager : Singleton<EnemyManager>
         waitSpawnTime = new WaitForSeconds(spawnTime);
     }
 
-    private void Start() {
-        StartCoroutine(nameof(SpawnEnemy));
+    private void OnEnable() {
+        StartCoroutine(SpawnEnemy());
+    }
+
+    private void OnDisable() {
+        StopAllCoroutines();
     }
 
     IEnumerator SpawnEnemy() {
         while (true) {
-            yield return waitSpawnTime;
             StartCoroutine(SpawnEnemies(Random.Range(1, 10)));
+            yield return waitSpawnTime;
         }
     }
 
