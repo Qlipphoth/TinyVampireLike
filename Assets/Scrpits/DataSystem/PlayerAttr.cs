@@ -10,7 +10,7 @@ public class PlayerAttr : Singleton<PlayerAttr>
     [Header("Player Attributes")]
     [SerializeField] int maxHealth = 10;      // 玩家的生命值上限
     [SerializeField] int healthRegeRate = 0;  // 血量回复速度, 单位：% / s, 最终的回复速度为每秒回复：maxHealth * healthRegeRate / 100
-    [SerializeField] int damageFactor = 100;  // 伤害倍率，单位：%，最终的伤害值为：damage * damageFactor / 100
+    [SerializeField] int damageFactor = 0;    // 伤害值，单位：%。最终的伤害值为：damage * (1 + damageFactor / 100)
     [SerializeField] int attackRangeFactor = 0;  // 攻击范围，单位：%。最终的攻击范围为：weaponAttackRange * (1 + attackRangeFactor / 100)  
     [SerializeField] int armor = 0;           // 护甲值，单位：%。最终的伤害值为：damage * (1 - Armor / 100)
     [SerializeField] int criticalRate = 0;    // 暴击率，单位：%。最终的暴击率为：criticalRate / 100
@@ -19,6 +19,9 @@ public class PlayerAttr : Singleton<PlayerAttr>
     [SerializeField] int dodgeRate = 0;       // 闪避率，单位：%。最终的闪避率为：dodgeRate / 100
     [SerializeField] int moveSpeedFactor = 0; // 移动速度，单位：%。最终的移动速度为：moveSpeed * (1 + moveSpeedFactor / 100)
     [SerializeField] int pickUpRangeFactor = 0; // 捡起物品的范围，单位：%。最终的捡起物品的范围为：pickUpRange * (1 + pickUpRangeFactor / 100)
+
+    [Header("Other Attrs")]
+    [SerializeField] int gemNum = 100;          // 宝石数量
 
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public int HealthRegeRate { get => healthRegeRate; set => healthRegeRate = value; }
@@ -31,6 +34,24 @@ public class PlayerAttr : Singleton<PlayerAttr>
     public int DodgeRate { get => dodgeRate; set => dodgeRate = value; }
     public int MoveSpeedFactor { get => moveSpeedFactor; set => moveSpeedFactor = value; }
     public int PickUpRangeFactor { get => pickUpRangeFactor; set => pickUpRangeFactor = value; }
+
+    public int GemNum { get => gemNum; set => gemNum = value; }
+
+    public List<int> GetPlayerAttrs() {
+        return new List<int> {
+            maxHealth,
+            healthRegeRate,
+            damageFactor,
+            attackRangeFactor,
+            armor,
+            criticalRate,
+            criticalDamage,
+            attackSpeed,
+            dodgeRate,
+            moveSpeedFactor,
+            pickUpRangeFactor,
+        };
+    }
 
     public void ChangeMaxHealth(int value) => maxHealth += value;
     public void ChangeHealthRegeRate(int value) => healthRegeRate += value;
@@ -45,27 +66,30 @@ public class PlayerAttr : Singleton<PlayerAttr>
     public void ChangePickUpRangeFactor(int value) => pickUpRangeFactor += value;
 
     public delegate void ChangePlayerAttr(int value);
-    public static Dictionary<int, ChangePlayerAttr> ChangePlayerAttrDict;
+    public static Dictionary<EnumAttrs.PlayerAttrs, ChangePlayerAttr> ChangePlayerAttrFuncDict;
 
     protected override void Awake() {
         base.Awake();
-        ChangePlayerAttrDict = new Dictionary<int, ChangePlayerAttr> {
-            {0, ChangeMaxHealth},
-            {1, ChangeHealthRegeRate},
-            {2, ChangeDamageFactor},
-            {3, ChangeAttackRangeFactor},
-            {4, ChangeArmor},
-            {5, ChangeCriticalRate},
-            {6, ChangeCriticalDamage},
-            {7, ChangeAttackSpeed},
-            {8, ChangeDodgeRate},
-            {9, ChangeMoveSpeedFactor},
-            {10, ChangePickUpRangeFactor}
+        ChangePlayerAttrFuncDict = new Dictionary<EnumAttrs.PlayerAttrs, ChangePlayerAttr> {
+            {EnumAttrs.PlayerAttrs.MAXHEALTH, ChangeMaxHealth},
+            {EnumAttrs.PlayerAttrs.HEALTHREGERATE, ChangeHealthRegeRate},
+            {EnumAttrs.PlayerAttrs.DAMAGEFACTOR, ChangeDamageFactor},
+            {EnumAttrs.PlayerAttrs.ATTACKRANGEFACTOR, ChangeAttackRangeFactor},
+            {EnumAttrs.PlayerAttrs.ARMOR, ChangeArmor},
+            {EnumAttrs.PlayerAttrs.CRITICALRATE, ChangeCriticalRate},
+            {EnumAttrs.PlayerAttrs.CRITICALDAMAGE, ChangeCriticalDamage},
+            {EnumAttrs.PlayerAttrs.ATTACKSPEED, ChangeAttackSpeed},
+            {EnumAttrs.PlayerAttrs.DODGERATE, ChangeDodgeRate},
+            {EnumAttrs.PlayerAttrs.MOVESPEEDFACTOR, ChangeMoveSpeedFactor},
+            {EnumAttrs.PlayerAttrs.PICKUPRANGEFACTOR, ChangePickUpRangeFactor},
         };
     }
 
     private void OnDisable() {
-        ChangePlayerAttrDict.Clear();
+        ChangePlayerAttrFuncDict.Clear();
     }
+
+    public static ChangePlayerAttr GetChangePlayerAttrFunc(EnumAttrs.PlayerAttrs playerAttr) 
+        => ChangePlayerAttrFuncDict[playerAttr];
 
 }

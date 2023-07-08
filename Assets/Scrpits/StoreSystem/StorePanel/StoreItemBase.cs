@@ -6,9 +6,13 @@ public class StoreItemBase : MonoBehaviour
 {
     [SerializeField] public ItemData itemData;
 
-    public void getItem() {
+    public void BuyItem() {
+        getItemBase();
+    }
+
+    private void getItemBase() {
         foreach (Effect effect in itemData.effects) {
-            PlayerAttr.ChangePlayerAttrDict[(int)effect.attr].Invoke(effect.value);
+            PlayerAttr.GetChangePlayerAttrFunc(effect.attr).Invoke(effect.value);
         }
     }
 

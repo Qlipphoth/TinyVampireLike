@@ -18,7 +18,7 @@ public class ItemAttrClause : MonoBehaviour
         sign = effect.value > 0 ? "+" : "";
         value.color = effect.value > 0 ? buffColor : debuffColor;
         value.text = sign + effect.value.ToString();
-        attrName.text = EnumAttrs.PlayerAttrs2String[effect.attr];
+        attrName.text = EnumAttrs.getPlayerAttrKey(effect.attr);
     }
 
 }

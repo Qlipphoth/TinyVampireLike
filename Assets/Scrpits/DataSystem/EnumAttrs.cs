@@ -28,9 +28,10 @@ public class EnumAttrs : MonoBehaviour
         PICKUPRANGEFACTOR,
     }
 
-    static public Dictionary<ItemCls, string> ItemCls2String;
-    static public Dictionary<WeaponCls, string> WeaponCls2String;
-    static public Dictionary<PlayerAttrs, string> PlayerAttrs2String;
+    static Dictionary<ItemCls, string> ItemCls2String;
+    static Dictionary<WeaponCls, string> WeaponCls2String;
+    static Dictionary<PlayerAttrs, string> PlayerAttrs2String;
+    // static Dictionary<PlayerAttrs, KeyValuePair<string, int>> playerAttrsDict;
 
     private void Awake() {
         ItemCls2String = new Dictionary<ItemCls, string> {
@@ -42,21 +43,27 @@ public class EnumAttrs : MonoBehaviour
         };
 
         PlayerAttrs2String = new Dictionary<PlayerAttrs, string> {
-            {PlayerAttrs.MAXHEALTH, "Max Health"},
-            {PlayerAttrs.HEALTHREGERATE, "Health Regeneration"},
-            {PlayerAttrs.DAMAGEFACTOR, "Damage Factor"},
-            {PlayerAttrs.ATTACKRANGEFACTOR, "Attack Range Factor"},
+            {PlayerAttrs.MAXHEALTH, "MaxHealth"},
+            {PlayerAttrs.HEALTHREGERATE, "HealthRege"},
+            {PlayerAttrs.DAMAGEFACTOR, "Damage"},
+            {PlayerAttrs.ATTACKRANGEFACTOR, "AttackRange"},
             {PlayerAttrs.ARMOR, "Armor"},
-            {PlayerAttrs.CRITICALRATE, "Critical Rate"},
-            {PlayerAttrs.CRITICALDAMAGE, "Critical Damage"},
-            {PlayerAttrs.ATTACKSPEED, "Attack Speed"},
-            {PlayerAttrs.DODGERATE, "Dodge Rate"},
-            {PlayerAttrs.MOVESPEEDFACTOR, "Move Speed Factor"},
-            {PlayerAttrs.PICKUPRANGEFACTOR, "Pickup Range Factor"},
+            {PlayerAttrs.CRITICALRATE, "CriticalRate"},
+            {PlayerAttrs.CRITICALDAMAGE, "CriticalDamage"},
+            {PlayerAttrs.ATTACKSPEED, "AttackSpeed"},
+            {PlayerAttrs.DODGERATE, "DodgeRate"},
+            {PlayerAttrs.MOVESPEEDFACTOR, "MoveSpeed"},
+            {PlayerAttrs.PICKUPRANGEFACTOR, "PickUpRange"},
         };
+    }
+
+    private void OnDisable() {
+        ItemCls2String.Clear();
+        WeaponCls2String.Clear();
+        PlayerAttrs2String.Clear();
     }
 
     public static string getItemCls(ItemCls itemCls) => ItemCls2String[itemCls];
     public static string getWeaponCls(WeaponCls weaponCls) => WeaponCls2String[weaponCls];
-    public static string getPlayerAttrs(PlayerAttrs playerAttrs) => PlayerAttrs2String[playerAttrs];
+    public static string getPlayerAttrKey(PlayerAttrs playerAttrs) => PlayerAttrs2String[playerAttrs];
 }
