@@ -13,7 +13,7 @@ public class PlayerAttr : Singleton<PlayerAttr>
     [SerializeField] int damageFactor = 0;    // 伤害值，单位：%。最终的伤害值为：damage * (1 + damageFactor / 100)
     [SerializeField] int attackRangeFactor = 0;  // 攻击范围，单位：%。最终的攻击范围为：weaponAttackRange * (1 + attackRangeFactor / 100)  
     [SerializeField] int armor = 0;           // 护甲值，单位：%。最终的伤害值为：damage * (1 - Armor / 100)
-    [SerializeField] int criticalRate = 0;    // 暴击率，单位：%。最终的暴击率为：criticalRate / 100
+    [SerializeField] int criticalRate = 10;    // 暴击率，单位：%。最终的暴击率为：criticalRate / 100
     [SerializeField] int criticalDamage = 50; // 暴击伤害，单位：%。最终的暴击伤害为：damage * (1 + criticalDamage / 100)
     [SerializeField] int attackSpeed = 0;     // 攻击速度，单位：%，最终武器的攻击间隔为：weaponAttackInterval * (1 - attackSpeed / 100)
     [SerializeField] int dodgeRate = 0;       // 闪避率，单位：%。最终的闪避率为：dodgeRate / 100

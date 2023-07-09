@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
 
     [Header("Weapon stats")]
     [SerializeField] float fireRate = 1f;  // 射速
-    [SerializeField] float damage;  // 设置子弹伤害
+    [SerializeField] float damage = 2f;   // 伤害
     [SerializeField] float gunRange = 5f;  // 射程
     [SerializeField] LayerMask enemyLayer;  // 敌人层
 
@@ -56,11 +56,11 @@ public class Gun : MonoBehaviour
     }
 
     void Fire() {
-        StartCoroutine(nameof(FireCoroutine));
+        // StartCoroutine(nameof(FireCoroutine));
     }
 
     void StopFire() {
-        StopCoroutine(nameof(FireCoroutine));
+        // StopCoroutine(nameof(FireCoroutine));
     }
 
     void SingleFire() {
@@ -74,21 +74,6 @@ public class Gun : MonoBehaviour
         bullet.SetDamage(damage);
         
         PoolManager.Release(shellPrefab, shellPoint.position, shellPoint.rotation);
-    }
-
-    IEnumerator FireCoroutine() {
-        while (true) {
-            SingleFire();
-            yield return waitForFireInterval;
-        }
-    }
-
-    IEnumerator FollowMouseCoroutine() {
-        while (true) {
-            gunDirection = ((Vector2)(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position)).normalized;
-            transform.right = gunDirection;  // 朝向鼠标
-            yield return null;
-        }
     }
 
     void AutoFollowenemy() {
@@ -108,6 +93,21 @@ public class Gun : MonoBehaviour
             }
         }
     }
+
+    // IEnumerator FireCoroutine() {
+    //     while (true) {
+    //         SingleFire();
+    //         yield return waitForFireInterval;
+    //     }
+    // }
+
+    // IEnumerator FollowMouseCoroutine() {
+    //     while (true) {
+    //         gunDirection = ((Vector2)(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position)).normalized;
+    //         transform.right = gunDirection;  // 朝向鼠标
+    //         yield return null;
+    //     }
+    // }
 
     // private void OnDrawGizmosSelected() {
     //     Gizmos.DrawWireSphere(transform.position, gunRange);

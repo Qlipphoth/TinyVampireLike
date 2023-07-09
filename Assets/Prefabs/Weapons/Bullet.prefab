@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5224971770477802347}
   - component: {fileID: 3271238299393635758}
   - component: {fileID: 7044319405897231739}
+  - component: {fileID: 9043974224187194525}
   m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
@@ -137,8 +138,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  ActivateTime: 1
   criticalRate: 0.4
   explosionPrefab: {fileID: 5465811056228018583, guid: d2007ec39982b7a4681b4fcd9a73b2ef, type: 3}
   hitPrefab: {fileID: 976469477947047660, guid: 78869d2821394994ab542f116bcf4f0d, type: 3}
   popupTextPrefab: {fileID: 6790492917363508354, guid: cf10aa51d183f3a4489626e6b34963c5, type: 3}
+--- !u!114 &9043974224187194525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5988753799876687129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016b3b5196bbc1c4f9c89910bcc9f0b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyGameObject: 0
+  lifetime: 1

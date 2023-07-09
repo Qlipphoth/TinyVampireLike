@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 3331531999507011809}
   - component: {fileID: 3331531999507011814}
   - component: {fileID: 3331531999507011815}
-  - component: {fileID: 3331531999507011812}
+  - component: {fileID: 1044616056730773557}
   m_Layer: 7
   m_Name: HPBar
   m_TagString: Untagged
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
---- !u!114 &3331531999507011812
+--- !u!114 &1044616056730773557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -256,12 +256,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3331531999507011818}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28dcdb13038a871448cb6e7693c247c5, type: 3}
+  m_Script: {fileID: 11500000, guid: bef0e8c0e79457a49b430f0b00b24060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fillImageBack: {fileID: 3331531999121527982}
   fillImageFront: {fileID: 3331532000120364845}
-  fillSpeed: 0.2
+  fillSpeed: 0.1
   delayFill: 1
   fillDelay: 0.5
 --- !u!1 &3331532000120364243

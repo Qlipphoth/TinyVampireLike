@@ -12,7 +12,7 @@ public class Character : MonoBehaviour
     [Header("Health")]
     [SerializeField] protected float maxHealth;
     [SerializeField] protected StatesBar onHeadHealthBar;
-    [SerializeField] bool showOnHeadHealthBar = true;
+    [SerializeField] protected bool showOnHeadHealthBar = true;
     // [SerializeField] AudioData[] deathAudioData;
 
     new protected Rigidbody2D rigidbody2D;  // 角色刚体

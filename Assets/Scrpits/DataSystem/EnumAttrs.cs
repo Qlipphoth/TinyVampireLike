@@ -66,4 +66,5 @@ public class EnumAttrs : MonoBehaviour
     public static string getItemCls(ItemCls itemCls) => ItemCls2String[itemCls];
     public static string getWeaponCls(WeaponCls weaponCls) => WeaponCls2String[weaponCls];
     public static string getPlayerAttrKey(PlayerAttrs playerAttrs) => PlayerAttrs2String[playerAttrs];
+    
 }

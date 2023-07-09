@@ -21,6 +21,11 @@ public class PopupText_Ani : MonoBehaviour
         textMesh.color = isCritical ? criticalColor : normalColor;
     }
 
+    public void SetText(float damage, bool isCritical) {
+        textMesh.text = ((int)damage).ToString();
+        textMesh.color = isCritical ? criticalColor : normalColor;
+    }
+
     void AE_Deactivate() {
         gameObject.SetActive(false);
     }
