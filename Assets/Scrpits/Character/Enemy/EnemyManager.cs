@@ -22,7 +22,8 @@ public class EnemyManager : Singleton<EnemyManager>
     WaitForSeconds waitSpawnWarningTime = new WaitForSeconds(1f);
     WaitForSeconds waitSpwanInterval = new WaitForSeconds(0.04f);
 
-    [SerializeField] public List<GameObject> allEnemies = new List<GameObject>();
+    public List<GameObject> allEnemies = new List<GameObject>();
+    EnemyController curEnemy;
 
     protected override void Awake() {
         base.Awake();
@@ -39,7 +40,10 @@ public class EnemyManager : Singleton<EnemyManager>
 
     IEnumerator SpawnEnemy() {
         while (true) {
-            StartCoroutine(SpawnEnemies(Random.Range(1, 10)));
+            if (WaveManager.Instance.WaveNum == 2) {
+                StartCoroutine(SpawnEnemies(Random.Range(1, 3)));
+            }
+            else StartCoroutine(SpawnEnemies(Random.Range(1, 10)));
             yield return waitSpawnTime;
         }
     }
@@ -51,11 +55,13 @@ public class EnemyManager : Singleton<EnemyManager>
             spawnPosList.Add(spawnPoints[Random.Range(0, spawnPoints.Length)].position + Random.insideUnitSphere * spwanRadius);
             enemyList.Add(enemyPrefabs[Random.Range(0, enemyPrefabs.Length)]);
         }
+
         for (i = 0; i < enemyNum; i++) {
             yield return waitSpwanInterval;
             PoolManager.Release(spwanWarning, spawnPosList[i], Quaternion.identity);
             // AudioManager.Instance.PlayRandomSFX(spawnAudioData);
             AudioManager.Instance.PoolPlayRandomSFX(spawnAudioData);
+            
         }
         
         yield return waitSpawnWarningTime;
@@ -71,7 +77,7 @@ public class EnemyManager : Singleton<EnemyManager>
         allEnemies.Remove(enemy);
     }
 
-    public void SlayAll() {
+    public void SlayAll(bool isDropLoot = false) {
         // 在 foreach 循环中对调用 Die 对集合进行了修改，会报错
         // foreach (var enemy in allEnemies) {
         //     enemy.GetComponent<EnemyController>().Die();
@@ -84,7 +90,9 @@ public class EnemyManager : Singleton<EnemyManager>
 
         // 只有反向遍历可以 SlayAll
         for (int i = allEnemies.Count - 1; i >= 0; i--) {
-            allEnemies[i].GetComponent<EnemyController>().Die();
+            curEnemy = allEnemies[i].GetComponent<EnemyController>();
+            if (isDropLoot) curEnemy.Die();
+            else curEnemy.DieWithoutLoot();
         }
         StopAllCoroutines();
     }

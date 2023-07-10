@@ -31,13 +31,16 @@ public class StoreItemGrid : MonoBehaviour
         itemImage.sprite = storeItem.itemData.itemSprite;
         itemName.text = storeItem.itemData.itemName;
         itemCls.text = EnumAttrs.getItemCls(storeItem.itemData.itemCls);
-        itemAttrs.genClauses(storeItem.itemData.effects);
+
+        itemAttrs.ClearClauses();
+
+        itemAttrs.genClause(storeItem.itemData.effects);
         itemAttrs.genSpecialInfo(storeItem.itemData.specialInfo);
         buyBtn.GetComponentInChildren<TMP_Text>().text = storeItem.itemData.itemPrice.ToString();
     }
 
     public void Buy() {
-        storeItem.BuyItem();
+        storeItem.Buy();
         Store.Instance.DeactivateLayout();
         Destroy(gameObject);
         PlayerStatsPanel.Instance.RefreshStatsPanel();

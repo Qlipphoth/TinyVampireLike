@@ -70,4 +70,10 @@ public class Pool
         return preparedObject;
     }
 
+    public void DeActivateAll() {
+        foreach (var obj in queue) {
+            obj.SetActive(false);
+        }
+    }
+
 }

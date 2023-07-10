@@ -13,4 +13,13 @@ public class DamageManager : Singleton<DamageManager>
         finalDamage *= (1 + (float)PlayerAttr.Instance.DamageFactor / 100);
         return new KeyValuePair<float, bool>(finalDamage, isCritical);
     }
+
+    public float GetFireRate(float fireRate) {
+        return fireRate * (1 - (float)PlayerAttr.Instance.AttackSpeed / 100);
+    }
+
+    public float GetFireRange(float fireRange) {
+        return fireRange * (1 + (float)PlayerAttr.Instance.AttackRangeFactor / 100);
+    }
+
 }

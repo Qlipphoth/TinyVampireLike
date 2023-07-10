@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     public PlayerInput playerInput;
 
     [Header("Player")]
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject playerPos;
 
     [Header("WaveManager")]
     [SerializeField] WaveManager waveManager;
@@ -22,6 +22,15 @@ public class GameManager : Singleton<GameManager>
     [Header("Gem Bars")]
     [SerializeField] GemBar InGameGemBar;
     [SerializeField] GemBar StoreGemBar;
+
+    [Header("Player Guns")]
+    public List<GameObject> playerGuns = new List<GameObject>();
+    Player player;
+
+    private void Start() {
+        player = playerPos.GetComponent<Player>();
+        player.SetWeaponsPos(playerGuns);
+    }
 
     public void OnGemChangedInGame(int num) {
         PlayerAttr.Instance.ChangeGemNum(num);
@@ -40,8 +49,10 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void GoForNextWave() {
-        player.transform.position = Vector3.zero;
         playerInput.EnableGameplayInput();
+        playerPos.transform.position = Vector3.zero;
+        player.SetWeaponsPos(playerGuns);
+        
         store.gameObject.SetActive(false);
         enemyManager.gameObject.SetActive(true);
         waveManager.gameObject.SetActive(true);

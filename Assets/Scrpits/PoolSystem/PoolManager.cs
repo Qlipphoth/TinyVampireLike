@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolManager : MonoBehaviour
+public class PoolManager : Singleton<PoolManager>
 {
     [SerializeField] Pool[] enemyPools;
     [SerializeField] Pool[] playerBulletPools;
@@ -12,7 +12,14 @@ public class PoolManager : MonoBehaviour
     [SerializeField] Pool[] lootsPools;
     static Dictionary<GameObject, Pool> prefab2Pool;  // prefab 到对应 pool 的映射
 
-    private void Awake() {
+    public void DeActivateAllLoots() {
+        foreach (var pool in lootsPools) {
+            pool.DeActivateAll();
+        }
+    }
+
+    protected override void Awake() {
+        base.Awake();
         prefab2Pool = new Dictionary<GameObject, Pool>();
         Initialize(enemyPools);
         Initialize(playerBulletPools);
@@ -32,6 +39,7 @@ public class PoolManager : MonoBehaviour
             checkPoolSize(vFXPools);
             checkPoolSize(lootsPools);
         }
+
     #endif
 
     void checkPoolSize(Pool[] pools) {
@@ -105,4 +113,5 @@ public class PoolManager : MonoBehaviour
         #endif
         return prefab2Pool[prefab].preparedObject(position, rotation, localScale);
     }
+
 }

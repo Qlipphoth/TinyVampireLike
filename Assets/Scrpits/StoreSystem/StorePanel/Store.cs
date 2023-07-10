@@ -6,15 +6,17 @@ using UnityEngine.UI;
 public class Store : Singleton<Store>
 {
     [SerializeField] GameObject storeItemGridPrefab;
-    [SerializeField] Transform storeItemGridArea;
-    [SerializeField] List<StoreItemBase> storeItems;
+    [SerializeField] GameObject storeWeaponGridPrefab;
+    [SerializeField] Transform storeObjectGridArea;
+    [SerializeField] List<StoreObject> storeObjects;
 
-    HorizontalLayoutGroup storeItemGridAreaLayout;    
-    List<StoreItemBase> curStoreItems = new List<StoreItemBase>();
+    HorizontalLayoutGroup storeObjectGridAreaLayout;    
+    List<StoreObject> curStoreObjects = new List<StoreObject>();
+    GameObject curGrid;
 
     protected override void Awake() {
         base.Awake();
-        storeItemGridAreaLayout = storeItemGridArea.gameObject.GetComponent<HorizontalLayoutGroup>();
+        storeObjectGridAreaLayout = storeObjectGridArea.gameObject.GetComponent<HorizontalLayoutGroup>();
     }
 
     private void OnEnable() {
@@ -22,27 +24,33 @@ public class Store : Singleton<Store>
     }
  
     public void DeactivateLayout() {
-        storeItemGridAreaLayout.enabled = false;
+        storeObjectGridAreaLayout.enabled = false;
     }
 
     public void RefeshStore(int ItemNum = 4) {
         for (int i = 0; i < ItemNum; i++) {
-            curStoreItems.Add(storeItems[Random.Range(0, storeItems.Count)]);
+            curStoreObjects.Add(storeObjects[Random.Range(0, storeObjects.Count)]);
         }
-        RefeshGridArea(ref curStoreItems);
-        curStoreItems.Clear();
+        RefeshGridArea(ref curStoreObjects);
+        curStoreObjects.Clear();
     }
 
-    private void RefeshGridArea(ref List<StoreItemBase> storeItems) {
-        storeItemGridAreaLayout.enabled = true;
+    private void RefeshGridArea(ref List<StoreObject> storeObjects) {
+        storeObjectGridAreaLayout.enabled = true;
         // Clear all store items
-        foreach (Transform child in storeItemGridArea) {
+        foreach (Transform child in storeObjectGridArea) {
             Destroy(child.gameObject);
         }
         // Generate store items
-        foreach (StoreItemBase storeItem in storeItems) {
-            GameObject itemGrid = Instantiate(storeItemGridPrefab, storeItemGridArea);
-            itemGrid.GetComponent<StoreItemGrid>().SetItemGrid(storeItem);
+        foreach (StoreObject storeObject in storeObjects) {
+            if (storeObject.isWeapon) {
+                curGrid = Instantiate(storeWeaponGridPrefab, storeObjectGridArea);
+                curGrid.GetComponent<StoreWeaponGrid>().SetWeaponGrid((StoreWeaponBase)storeObject);
+            }
+            else {
+                curGrid = Instantiate(storeItemGridPrefab, storeObjectGridArea);
+                curGrid.GetComponent<StoreItemGrid>().SetItemGrid((StoreItemBase)storeObject);
+            }
         }
     }
 }

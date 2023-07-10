@@ -20,7 +20,5 @@ MonoBehaviour:
     value: 10
   - attr: 5
     value: 3
-  - attr: 0
-    value: -5
   specialInfo: The potato chips at the convenience store are half price today!
   itemPrice: 80

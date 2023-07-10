@@ -8,16 +8,22 @@ public class WaveManager : PersistentSingleton<WaveManager>
     [Header("Wave Texts")]
     [SerializeField] TMP_Text waveNumText;
     [SerializeField] TMP_Text waveTimerText;
+    [SerializeField] GameObject waveCompleteText;
+
+    [Header("Wave SFXs")]
+    [SerializeField] AudioData wavecompleteSFX;
 
     [Header("Wave Settings")]
     [SerializeField] int waveNum, waveTimer;
-    
+
+    public int WaveNum => waveNum;   
     WaitForSeconds waitForOneSecond = new WaitForSeconds(1f);
 
     private void OnEnable() {
         waveTimer = 30;
         waveNumText.text = ($"Wave {waveNum++}").ToString();
         waveTimerText.text = waveTimer.ToString();
+        waveCompleteText.SetActive(false);
         StartCoroutine(nameof(WaveTimer));
     }
 
@@ -32,12 +38,16 @@ public class WaveManager : PersistentSingleton<WaveManager>
             waveTimer--;
             waveTimerText.text = waveTimer.ToString();
         }
-        EnemyManager.Instance.SlayAll();
-        GameManager.Instance.playerInput.DisableAllInputs();
-        yield return waitForOneSecond;  
-        yield return waitForOneSecond;  
 
-        // TODO: 通关显示
+        EnemyManager.Instance.SlayAll();
+        PoolManager.Instance.DeActivateAllLoots();
+        GameManager.Instance.playerInput.DisableAllInputs();
+
+        waveCompleteText.SetActive(true);  // 通关显示
+        AudioManager.Instance.PoolPlaySFX(wavecompleteSFX);  // 通关音效
+        yield return waitForOneSecond;  
+        yield return waitForOneSecond;  
+        
         GameManager.Instance.OnWaveEnd();
     }
 

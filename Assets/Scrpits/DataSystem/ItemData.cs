@@ -8,7 +8,7 @@ public class ItemData : ScriptableObject
     public Sprite itemSprite;
     public string itemName;
     public EnumAttrs.ItemCls itemCls;
-    public List<Effect> effects;
+    public List<ItemEffect> effects;
     [TextArea] public string specialInfo;
     public int itemPrice;
 }

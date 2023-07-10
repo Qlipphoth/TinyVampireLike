@@ -7,8 +7,8 @@ using UnityEngine;
 /// </summary>
 public class Gun : MonoBehaviour
 {
-    [Header("Input")]
-    [SerializeField] PlayerInput input;
+    [Header("Weapon Data")]
+    public WeaponData weaponData;  // 武器数据
 
     [Header("Bullets & Shells")]
     [SerializeField] GameObject bulletPrefab;  // 子弹预制体
@@ -17,9 +17,6 @@ public class Gun : MonoBehaviour
     [SerializeField] Transform shellPoint;  // 弹壳弹出位置
 
     [Header("Weapon stats")]
-    [SerializeField] float fireRate = 1f;  // 射速
-    [SerializeField] float damage = 2f;   // 伤害
-    [SerializeField] float gunRange = 5f;  // 射程
     [SerializeField] LayerMask enemyLayer;  // 敌人层
 
     [Header("Audio")]
@@ -31,36 +28,25 @@ public class Gun : MonoBehaviour
     GameObject bulletObject;
     Bullet bullet;
     Collider2D[] colliders;
+
+    float damage;
+    float gunRange;
+    float fireRate;
     float fireTimer;
 
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
-        waitForFireInterval = new WaitForSeconds(fireRate);
+    }
+
+    private void Start() {
+        damage = weaponData.damage.value;
+        gunRange = weaponData.range.value;
+        fireRate = weaponData.fireRate.value;
     }
 
     private void Update() {
         AutoFollowenemy();
         fireTimer -= Time.deltaTime;
-    }
-
-    private void OnEnable() {
-        // input.OnFireEvent += Fire;
-        // input.OnStopFireEvent += StopFire;
-        // StartCoroutine(nameof(FollowMouseCoroutine));
-    }
-
-    private void OnDisable() {
-        // input.OnFireEvent -= Fire;
-        // input.OnStopFireEvent -= StopFire;
-        StopAllCoroutines();
-    }
-
-    void Fire() {
-        // StartCoroutine(nameof(FireCoroutine));
-    }
-
-    void StopFire() {
-        // StopCoroutine(nameof(FireCoroutine));
     }
 
     void SingleFire() {
@@ -77,7 +63,8 @@ public class Gun : MonoBehaviour
     }
 
     void AutoFollowenemy() {
-        colliders = Physics2D.OverlapCircleAll(transform.position, gunRange, enemyLayer);
+        colliders = Physics2D.OverlapCircleAll(transform.position, 
+            DamageManager.Instance.GetFireRange(gunRange), enemyLayer);  // TODO: 优化，不要每帧都获取范围等参数
         if (colliders.Length == 0) {
             transform.right = Vector2.right;  // 朝向右边
             return;
@@ -88,29 +75,10 @@ public class Gun : MonoBehaviour
                 transform.right = gunDirection;  // 朝向敌人
                 if (fireTimer <= 0f) {
                     SingleFire();
-                    fireTimer = fireRate;
+                    fireTimer = DamageManager.Instance.GetFireRate(fireRate);
                 }
             }
         }
     }
-
-    // IEnumerator FireCoroutine() {
-    //     while (true) {
-    //         SingleFire();
-    //         yield return waitForFireInterval;
-    //     }
-    // }
-
-    // IEnumerator FollowMouseCoroutine() {
-    //     while (true) {
-    //         gunDirection = ((Vector2)(Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position)).normalized;
-    //         transform.right = gunDirection;  // 朝向鼠标
-    //         yield return null;
-    //     }
-    // }
-
-    // private void OnDrawGizmosSelected() {
-    //     Gizmos.DrawWireSphere(transform.position, gunRange);
-    // }
 
 }

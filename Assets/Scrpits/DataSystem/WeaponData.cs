@@ -8,9 +8,10 @@ public class WeaponData : ScriptableObject
     public Sprite weaponSprite;
     public string weaponName;
     public EnumAttrs.WeaponCls weaponCls;
-    public int weaponDamage;
-    public int weaponKnockback;
-    public int weaponPierce;
-    public int weaponRange;
+    public WeaponEffect damage;
+    public WeaponEffect fireRate;
+    public WeaponEffect range;
+    public List<WeaponEffect> otherEffects;
+    public int weaponPrice;
     [TextArea] public string specialInfo;
 }

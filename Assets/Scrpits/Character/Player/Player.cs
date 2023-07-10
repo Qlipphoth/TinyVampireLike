@@ -7,6 +7,11 @@ public class Player : Character
     [Header("HUD")]
     [SerializeField] HUDHPBar hudHP;
 
+    [Header("Weapon Position")]
+    [SerializeField] Transform weaponPosition2;
+    [SerializeField] Transform weaponPosition4;
+    [SerializeField] Transform weaponPosition6;
+
     [Header("Input")]
     [SerializeField] PlayerInput input;
 
@@ -142,5 +147,18 @@ public class Player : Character
 
 #endregion
 
+#region Miscs
+
+    public void SetWeaponsPos(List<GameObject> weapons) {
+        int weaponNum = weapons.Count;
+        Transform WeaponPos = weaponNum > 4 ? weaponPosition6 : 
+            weaponNum > 2 ? weaponPosition4 : weaponPosition2;
+
+        for (int i = 0; i < weaponNum; i++) {
+            Instantiate(weapons[i], WeaponPos.GetChild(i));
+        }
+    }
+
+#endregion
 
 }

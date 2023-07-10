@@ -85,6 +85,16 @@ public class EnemyController : Character
         StartCoroutine(DieCoroutine());
     }
 
+    public void DieWithoutLoot() {
+        enemyIsDead = true;
+        collider2D.enabled = false;
+        rigidbody2D.drag = 5f;
+        EnemyManager.Instance.RemoveEnemy(gameObject);
+
+        StopCoroutine(nameof(MoveCoroutine));
+        StartCoroutine(DieCoroutine());
+    }
+
     IEnumerator DieCoroutine() {
         animator.SetTrigger("Die");
         // Debug.Log("Enemy is dying");

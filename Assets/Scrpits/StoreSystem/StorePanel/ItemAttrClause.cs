@@ -13,7 +13,7 @@ public class ItemAttrClause : MonoBehaviour
     [SerializeField] Color buffColor;
     [SerializeField] Color debuffColor;
 
-    public void SetAttrClause(Effect effect) {
+    public void SetAttrClause(ItemEffect effect) {
         string sign;
         sign = effect.value > 0 ? "+" : "";
         value.color = effect.value > 0 ? buffColor : debuffColor;
