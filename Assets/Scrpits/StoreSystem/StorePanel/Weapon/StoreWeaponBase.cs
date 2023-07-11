@@ -11,10 +11,11 @@ public class StoreWeaponBase : StoreObject
 
     public override void Buy() {
         getWeaponBase();
+        WeaponPanel.Instance.RefreshWeaponPanel();
     }
 
     private void getWeaponBase() {
-        GameManager.Instance.playerGuns.Add(weaponPrefab);
+        GameManager.Instance.playerWeapons.Add(this);
     }
 
 }

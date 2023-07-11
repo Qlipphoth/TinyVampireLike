@@ -24,12 +24,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] GemBar StoreGemBar;
 
     [Header("Player Guns")]
-    public List<GameObject> playerGuns = new List<GameObject>();
+    public List<StoreWeaponBase> playerWeapons = new List<StoreWeaponBase>();
     Player player;
 
     private void Start() {
         player = playerPos.GetComponent<Player>();
-        player.SetWeaponsPos(playerGuns);
+        player.SetWeaponsPos(playerWeapons);
     }
 
     public void OnGemChangedInGame(int num) {
@@ -51,7 +51,7 @@ public class GameManager : Singleton<GameManager>
     public void GoForNextWave() {
         playerInput.EnableGameplayInput();
         playerPos.transform.position = Vector3.zero;
-        player.SetWeaponsPos(playerGuns);
+        player.SetWeaponsPos(playerWeapons);
         
         store.gameObject.SetActive(false);
         enemyManager.gameObject.SetActive(true);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class WaveManager : PersistentSingleton<WaveManager>
+public class WaveManager : Singleton<WaveManager>
 {
     [Header("Wave Texts")]
     [SerializeField] TMP_Text waveNumText;
@@ -17,12 +17,13 @@ public class WaveManager : PersistentSingleton<WaveManager>
     [SerializeField] int waveNum, waveTimer;
 
     public int WaveNum => waveNum;   
+    int curWaveTimer;
     WaitForSeconds waitForOneSecond = new WaitForSeconds(1f);
 
     private void OnEnable() {
-        waveTimer = 30;
+        curWaveTimer = waveTimer;
         waveNumText.text = ($"Wave {waveNum++}").ToString();
-        waveTimerText.text = waveTimer.ToString();
+        waveTimerText.text = curWaveTimer.ToString();
         waveCompleteText.SetActive(false);
         StartCoroutine(nameof(WaveTimer));
     }
@@ -33,10 +34,10 @@ public class WaveManager : PersistentSingleton<WaveManager>
 
     // 1. 每一波的波数显示及倒计时
     IEnumerator WaveTimer() {
-        while (waveTimer > 0) {
+        while (curWaveTimer > 0) {
             yield return waitForOneSecond;
-            waveTimer--;
-            waveTimerText.text = waveTimer.ToString();
+            curWaveTimer--;
+            waveTimerText.text = curWaveTimer.ToString();
         }
 
         EnemyManager.Instance.SlayAll();

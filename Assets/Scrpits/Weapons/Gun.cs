@@ -23,6 +23,7 @@ public class Gun : MonoBehaviour
     [SerializeField] AudioData fireAudio;  // 射击音效
 
     Vector2 gunDirection;
+    SpriteRenderer spriteRenderer;
     Animator animator;
     WaitForSeconds waitForFireInterval;
     GameObject bulletObject;
@@ -36,6 +37,7 @@ public class Gun : MonoBehaviour
 
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start() {
@@ -46,6 +48,7 @@ public class Gun : MonoBehaviour
 
     private void Update() {
         AutoFollowenemy();
+        AutoFlip();
         fireTimer -= Time.deltaTime;
     }
 
@@ -54,7 +57,7 @@ public class Gun : MonoBehaviour
         // AudioManager.Instance.PlayRandomSFX(fireAudio);
         AudioManager.Instance.PoolPlayRandomSFX(fireAudio);
         
-        bulletObject = PoolManager.Release(bulletPrefab, muzzlePoint.position, Quaternion.identity);
+        bulletObject = PoolManager.Release(bulletPrefab, muzzlePoint.position, muzzlePoint.rotation);
         bullet = bulletObject.GetComponent<Bullet>();
         bullet.SetSpeed(Quaternion.Euler(0f, 0f, Random.Range(-5f, 5f)) * gunDirection);
         bullet.SetDamage(damage);
@@ -66,7 +69,8 @@ public class Gun : MonoBehaviour
         colliders = Physics2D.OverlapCircleAll(transform.position, 
             DamageManager.Instance.GetFireRange(gunRange), enemyLayer);  // TODO: 优化，不要每帧都获取范围等参数
         if (colliders.Length == 0) {
-            transform.right = Vector2.right;  // 朝向右边
+            gunDirection = Vector2.right;
+            transform.right = gunDirection;  // 朝向右边
             return;
         }
         foreach (var collider in colliders) {
@@ -79,6 +83,10 @@ public class Gun : MonoBehaviour
                 }
             }
         }
+    }
+
+    void AutoFlip() {
+        spriteRenderer.flipY = gunDirection.x < 0f;
     }
 
 }

@@ -149,13 +149,37 @@ public class Player : Character
 
 #region Miscs
 
+    private void DestoryChild(Transform parent) {
+        foreach (Transform child in parent) {
+            if (child.childCount > 0) Destroy(child.GetChild(0).gameObject);
+        }
+    }
+
     public void SetWeaponsPos(List<GameObject> weapons) {
+        DestoryChild(weaponPosition2);
+        DestoryChild(weaponPosition4);
+        DestoryChild(weaponPosition6);
+
         int weaponNum = weapons.Count;
         Transform WeaponPos = weaponNum > 4 ? weaponPosition6 : 
             weaponNum > 2 ? weaponPosition4 : weaponPosition2;
 
         for (int i = 0; i < weaponNum; i++) {
             Instantiate(weapons[i], WeaponPos.GetChild(i));
+        }
+    }
+
+    public void SetWeaponsPos(List<StoreWeaponBase> weapons) {
+        DestoryChild(weaponPosition2);
+        DestoryChild(weaponPosition4);
+        DestoryChild(weaponPosition6);
+
+        int weaponNum = weapons.Count;
+        Transform WeaponPos = weaponNum > 4 ? weaponPosition6 : 
+            weaponNum > 2 ? weaponPosition4 : weaponPosition2;
+
+        for (int i = 0; i < weaponNum; i++) {
+            Instantiate(weapons[i].weaponPrefab, WeaponPos.GetChild(i));
         }
     }
 
