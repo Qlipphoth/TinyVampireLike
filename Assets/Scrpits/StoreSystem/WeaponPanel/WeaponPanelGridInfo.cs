@@ -18,19 +18,28 @@ public class WeaponPanelGridInfo : MonoBehaviour
     [SerializeField] Button SaleBtn;
     [SerializeField] Button CancelBtn;
 
+    int index;
+    int weaponLevel;
+
     private void OnEnable() {
         RefeshGrid();
         // WeaponPanel.Instance.SetMaskState(true);
         CancelBtn.onClick.AddListener(OnCancelBtnClicked);
+        SaleBtn.onClick.AddListener(OnSaleBtnClicked);
+        CraftBtn.onClick.AddListener(OnCraftBtnClicked);
     }
 
     private void OnDisable() {
         // WeaponPanel.Instance.SetMaskState(false);
         CancelBtn.onClick.RemoveListener(OnCancelBtnClicked);
+        SaleBtn.onClick.RemoveListener(OnSaleBtnClicked);
+        CraftBtn.onClick.RemoveListener(OnCraftBtnClicked);
     }
 
     public void SetWeaponInfoPanel(int index) {
         this.weapon = GameManager.Instance.playerWeapons[index];
+        this.weaponLevel = weapon.weaponLevel;
+        this.index = index;
         RefeshGrid();
         WeaponPanel.Instance.SetMaskState(true);
         gameObject.SetActive(true);
@@ -43,10 +52,10 @@ public class WeaponPanelGridInfo : MonoBehaviour
         
         weaponAttrs.ClearClauses();
 
-        weaponAttrs.genClause(weapon.weaponData.damage);
-        weaponAttrs.genClause(weapon.weaponData.fireRate);
-        weaponAttrs.genClause(weapon.weaponData.range);
-        weaponAttrs.genClause(weapon.weaponData.otherEffects);
+        weaponAttrs.genClause(weapon.weaponData.damage, weaponLevel);
+        weaponAttrs.genClause(weapon.weaponData.fireRate, weaponLevel);
+        weaponAttrs.genClause(weapon.weaponData.range, weaponLevel);
+        weaponAttrs.genClause(weapon.weaponData.otherEffects, weaponLevel);
         
         weaponAttrs.genSpecialInfo(weapon.weaponData.specialInfo);
     }
@@ -54,6 +63,16 @@ public class WeaponPanelGridInfo : MonoBehaviour
     void OnCancelBtnClicked() {
         gameObject.SetActive(false);
         WeaponPanel.Instance.SetMaskState(false);
+    }
+
+    void OnSaleBtnClicked() {
+        GameManager.Instance.SaleWeapon(index);
+        OnCancelBtnClicked();
+    }
+
+    void OnCraftBtnClicked() {
+        GameManager.Instance.CraftWeapon(index);
+        OnCancelBtnClicked();
     }
 
 }

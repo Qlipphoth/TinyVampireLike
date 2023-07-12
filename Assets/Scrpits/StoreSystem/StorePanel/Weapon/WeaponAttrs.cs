@@ -13,16 +13,16 @@ public class WeaponAttrs : MonoBehaviour
         }
     }
 
-    public void genClause(WeaponEffect effect) {
+    public void genClause(WeaponEffect effect, int weaponLevel) {
         // Generate clauses
         GameObject clause = Instantiate(weaponAttrClausePrefab, transform);
-        clause.GetComponent<WeaponAttrClause>().SetAttrClause(effect);
+        clause.GetComponent<WeaponAttrClause>().SetAttrClause(effect, weaponLevel);
     }
 
-    public void genClause(List<WeaponEffect> effects) {
+    public void genClause(List<WeaponEffect> effects, int weaponLevel) {
         // Generate clauses
         foreach (var effect in effects) {
-            genClause(effect);
+            genClause(effect, weaponLevel);
         }
     }
 

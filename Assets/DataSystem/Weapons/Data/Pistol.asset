@@ -17,13 +17,25 @@ MonoBehaviour:
   weaponCls: 0
   damage:
     attr: 0
-    value: 5
+    value:
+    - 5
+    - 10
+    - 20
+    - 50
   fireRate:
     attr: 1
-    value: 1.2
+    value:
+    - 1.2
+    - 1
+    - 1
+    - 0.8
   range:
     attr: 2
-    value: 2
+    value:
+    - 3
+    - 3
+    - 3
+    - 3
   otherEffects: []
   weaponPrice: 50
   specialInfo: A Pistol

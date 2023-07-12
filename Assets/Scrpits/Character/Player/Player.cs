@@ -37,6 +37,8 @@ public class Player : Character
     WaitForSeconds waitForMuteki;
     Collider2D[] colliders; 
 
+    Gun curWeaopn;
+
     protected override void Awake() {
         base.Awake();
         playerCollider = GetComponent<Collider2D>();
@@ -179,7 +181,8 @@ public class Player : Character
             weaponNum > 2 ? weaponPosition4 : weaponPosition2;
 
         for (int i = 0; i < weaponNum; i++) {
-            Instantiate(weapons[i].weaponPrefab, WeaponPos.GetChild(i));
+            curWeaopn = Instantiate(weapons[i].weaponPrefab, WeaponPos.GetChild(i)).GetComponent<Gun>();
+            curWeaopn.SetGunAttrs(weapons[i].weaponData, weapons[i].weaponLevel);
         }
     }
 

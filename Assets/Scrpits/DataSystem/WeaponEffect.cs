@@ -6,5 +6,5 @@ using UnityEngine;
 public class WeaponEffect : Effect
 {
     public EnumAttrs.WeaponAttrs attr;
-    public float value;
+    public List<float> value;
 }

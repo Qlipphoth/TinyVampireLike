@@ -5,7 +5,7 @@ using TMPro;
 
 public class WeaponPanel : Singleton<WeaponPanel>
 {
-    [SerializeField] List<GameObject> weaponPanelGrids;
+    [SerializeField] List<WeaponPanelGrid> weaponPanelGrids;
 
     [Header("Title")]
     [SerializeField] TMP_Text title;
@@ -24,14 +24,14 @@ public class WeaponPanel : Singleton<WeaponPanel>
         weaponCount = GameManager.Instance.playerWeapons.Count;
         title.text = $"Weapon ({weaponCount}/6)";
         for (i = 0; i < weaponCount; i++) {
-            weaponPanelGrids[i].GetComponent<WeaponPanelGrid>().SetWeaponGrid(i);
-            weaponPanelGrids[i].SetActive(true);
+            weaponPanelGrids[i].SetWeaponGrid(i);
+            weaponPanelGrids[i].gameObject.SetActive(true);
         }
     }
 
     void ClearWeaponPanel() {
-        for (int i = 0; i < weaponPanelGrids.Count; i++) {
-            weaponPanelGrids[i].SetActive(false);
+        for (i = 0; i < weaponPanelGrids.Count; i++) {
+            weaponPanelGrids[i].gameObject.SetActive(false);
         }
     }
 

@@ -13,7 +13,7 @@ public class Store : Singleton<Store>
     [Header("Refresh Button")]
     [SerializeField] ConsumeGemBtn RefreshBtn;
     [SerializeField] int RefreshGemNum = 10;
- 
+
     List<StoreObject> curStoreObjects = new List<StoreObject>();
     GameObject curGrid;
 

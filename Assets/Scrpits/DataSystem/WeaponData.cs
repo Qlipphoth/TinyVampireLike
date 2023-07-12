@@ -14,4 +14,5 @@ public class WeaponData : ScriptableObject
     public List<WeaponEffect> otherEffects;
     public int weaponPrice;
     [TextArea] public string specialInfo;
+    
 }

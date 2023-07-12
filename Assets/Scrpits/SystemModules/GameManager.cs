@@ -27,10 +27,21 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] AudioData[] levelUpSFX;
     [SerializeField] GameObject  levelUpVFX;
 
-    [Header("Player Guns")]
+    [Header("Colors")]
+    public List<Color> bgColors;
+
+    [Header("Player Start Weapons")]
+    public List<StoreWeaponBase> playerStartWeapons = new List<StoreWeaponBase>();
+
+    [Header("Player Weapons")]
     public List<StoreWeaponBase> playerWeapons = new List<StoreWeaponBase>();
 
+    StoreWeaponBase curWeapon;
+
     private void Start() {
+        for (int i = 0; i < playerStartWeapons.Count; i++) {
+            playerWeapons.Add(Instantiate(playerStartWeapons[i], transform));
+        }
         OnWaveStart();
     }
 
@@ -48,6 +59,31 @@ public class GameManager : Singleton<GameManager>
         AudioManager.Instance.PoolPlayRandomSFX(levelUpSFX);
         PoolManager.Release(levelUpVFX, player.transform.position);
         PlayerAttr.Instance.LevelUp();
+    }
+
+    public void SaleWeapon(int index) {
+        PlayerAttr.Instance.ChangeGemNum((int)(
+            playerWeapons[index].weaponData.weaponPrice * 0.7f));
+        DestoryWeapon(index);
+        Store.Instance.RefreshGem();
+    }
+
+    public void CraftWeapon(int index) {
+        for (int i = 0; i < playerWeapons.Count; i++) {
+            if ((playerWeapons[i].weaponData.weaponName == playerWeapons[index].weaponData.weaponName) && 
+                (playerWeapons[i].weaponLevel == playerWeapons[index].weaponLevel) && (i != index)) {
+                playerWeapons[index].weaponLevel++;
+                DestoryWeapon(i);
+                return;
+            }
+        }
+    }
+
+    private void DestoryWeapon(int index) {
+        curWeapon = playerWeapons[index];
+        playerWeapons.RemoveAt(index);
+        Destroy(curWeapon.gameObject);
+        WeaponPanel.Instance.RefreshWeaponPanel();
     }
 
     public void OnWaveEnd() {

@@ -13,6 +13,8 @@ public class StoreWeaponGrid : MonoBehaviour
     [SerializeField] WeaponAttrs weaponAttrs;
     [SerializeField] ConsumeGemBtn buyBtn;
 
+    int weaponLevel;
+
     private void OnEnable() {
         RefeshGrid();
         buyBtn.Initialize(weapon.weaponData.weaponPrice);
@@ -25,6 +27,7 @@ public class StoreWeaponGrid : MonoBehaviour
 
     public void SetWeaponGrid(StoreWeaponBase weapon) {
         this.weapon = weapon;
+        this.weaponLevel = weapon.weaponLevel;
         RefeshGrid();
     }
 
@@ -35,10 +38,10 @@ public class StoreWeaponGrid : MonoBehaviour
         
         weaponAttrs.ClearClauses();
 
-        weaponAttrs.genClause(weapon.weaponData.damage);
-        weaponAttrs.genClause(weapon.weaponData.fireRate);
-        weaponAttrs.genClause(weapon.weaponData.range);
-        weaponAttrs.genClause(weapon.weaponData.otherEffects);
+        weaponAttrs.genClause(weapon.weaponData.damage, weaponLevel);
+        weaponAttrs.genClause(weapon.weaponData.fireRate, weaponLevel);
+        weaponAttrs.genClause(weapon.weaponData.range, weaponLevel);
+        weaponAttrs.genClause(weapon.weaponData.otherEffects, weaponLevel);
         
         weaponAttrs.genSpecialInfo(weapon.weaponData.specialInfo);
 

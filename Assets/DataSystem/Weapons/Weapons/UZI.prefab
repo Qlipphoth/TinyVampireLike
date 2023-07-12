@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: dcae04f2cca7c9c48a9f6a0ec37d517d, type: 2}
   weaponPrefab: {fileID: 2744655467289686330, guid: 3aafaf9bab96b1d4499d3f048a91d97e, type: 3}
+  weaponLevel: 0

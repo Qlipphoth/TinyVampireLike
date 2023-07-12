@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0917c15e93ad94490b3b9673941905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 5
   onHeadHealthBar: {fileID: 3402402326472325352}
   showOnHeadHealthBar: 0
   moveSpeed: 0.5

@@ -8,6 +8,7 @@ public class StoreWeaponBase : StoreObject
     public GameObject weaponPrefab;
 
     public override bool isWeapon => true;
+    public int weaponLevel;
 
     public override void Buy() {
         getWeaponBase();
@@ -15,7 +16,7 @@ public class StoreWeaponBase : StoreObject
     }
 
     private void getWeaponBase() {
-        GameManager.Instance.playerWeapons.Add(this);
+        GameManager.Instance.playerWeapons.Add(Instantiate(this, GameManager.Instance.transform));
     }
 
 }

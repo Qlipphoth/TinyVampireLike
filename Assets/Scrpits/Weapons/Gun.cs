@@ -7,8 +7,6 @@ using UnityEngine;
 /// </summary>
 public class Gun : MonoBehaviour
 {
-    [Header("Weapon Data")]
-    public WeaponData weaponData;  // 武器数据
 
     [Header("Bullets & Shells")]
     [SerializeField] GameObject bulletPrefab;  // 子弹预制体
@@ -38,12 +36,6 @@ public class Gun : MonoBehaviour
     private void Awake() {
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-    }
-
-    private void Start() {
-        damage = weaponData.damage.value;
-        gunRange = weaponData.range.value;
-        fireRate = weaponData.fireRate.value;
     }
 
     private void Update() {
@@ -87,6 +79,12 @@ public class Gun : MonoBehaviour
 
     void AutoFlip() {
         spriteRenderer.flipY = gunDirection.x < 0f;
+    }
+
+    public void SetGunAttrs(WeaponData weaponData, int weaponLevel) {
+        this.damage = weaponData.damage.value[weaponLevel];
+        this.gunRange = weaponData.range.value[weaponLevel];
+        this.fireRate = weaponData.fireRate.value[weaponLevel];
     }
 
 }

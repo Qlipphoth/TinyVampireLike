@@ -17,13 +17,25 @@ MonoBehaviour:
   weaponCls: 0
   damage:
     attr: 0
-    value: 1
+    value:
+    - 1
+    - 2
+    - 4
+    - 8
   fireRate:
     attr: 1
-    value: 0.3
+    value:
+    - 0.8
+    - 0.6
+    - 0.4
+    - 0.2
   range:
     attr: 2
-    value: 3
+    value:
+    - 3
+    - 3
+    - 3
+    - 3
   otherEffects: []
   weaponPrice: 30
   specialInfo: UZI
