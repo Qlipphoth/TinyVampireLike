@@ -22,6 +22,9 @@ public class PlayerAttr : Singleton<PlayerAttr>
 
     [Header("Other Attrs")]
     [SerializeField] int gemNum = 100;          // 宝石数量
+    [SerializeField] int level = 1;             // 玩家等级
+    [SerializeField] float currentEXP = 0;        // 当前经验值
+    [SerializeField] float maxEXP = 100;          // 当前等级的最大经验值
 
     public int MaxHealth { get => maxHealth; set => maxHealth = value; }
     public int HealthRegeRate { get => healthRegeRate; set => healthRegeRate = value; }
@@ -36,6 +39,10 @@ public class PlayerAttr : Singleton<PlayerAttr>
     public int PickUpRangeFactor { get => pickUpRangeFactor; set => pickUpRangeFactor = value; }
 
     public int GemNum { get => gemNum; set => gemNum = value; }
+    public int Level { get => level; set => level = value; }
+    public float CurrentEXP { get => currentEXP; set => currentEXP = value; }
+    public float MaxEXP { get => maxEXP; set => maxEXP = value; }
+
 
     public List<int> GetPlayerAttrs() {
         return new List<int> {
@@ -64,7 +71,10 @@ public class PlayerAttr : Singleton<PlayerAttr>
     public void ChangeDodgeRate(int value) => dodgeRate += value;
     public void ChangeMoveSpeedFactor(int value) => moveSpeedFactor += value;
     public void ChangePickUpRangeFactor(int value) => pickUpRangeFactor += value;
+    
     public void ChangeGemNum(int value) => gemNum += value;
+    public void ChangeCurrentEXP(int value) => currentEXP += value;
+
 
     public delegate void ChangePlayerAttr(int value);
     public static Dictionary<EnumAttrs.PlayerAttrs, ChangePlayerAttr> ChangePlayerAttrFuncDict;
@@ -92,5 +102,11 @@ public class PlayerAttr : Singleton<PlayerAttr>
 
     public static ChangePlayerAttr GetChangePlayerAttrFunc(EnumAttrs.PlayerAttrs playerAttr) 
         => ChangePlayerAttrFuncDict[playerAttr];
+
+    public void LevelUp() {
+        currentEXP -= maxEXP;
+        maxEXP *= 1.5f;
+        level++;
+    }
 
 }

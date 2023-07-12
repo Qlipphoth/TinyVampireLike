@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WeaponPanel : Singleton<WeaponPanel>
 {
-    [SerializeField] Transform weaponPanelGridParent;
     [SerializeField] List<GameObject> weaponPanelGrids;
 
     [Header("Mask")]

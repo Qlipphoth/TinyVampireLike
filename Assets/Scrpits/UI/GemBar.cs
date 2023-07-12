@@ -17,6 +17,10 @@ public class GemBar : MonoBehaviour
         yield return null;
     }
 
+    public void Initialize() {
+        SetGemNum(PlayerAttr.Instance.GemNum);
+    }
+
     private void SetGemNum(int gemNum) => gemNumText.text = gemNum.ToString();
     
 }

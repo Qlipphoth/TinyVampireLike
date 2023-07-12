@@ -4,11 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class WeaponPanelGridInfo : Singleton<WeaponPanelGridInfo>
+public class WeaponPanelGridInfo : MonoBehaviour
 {
-    [Header("Pos")]
-    [SerializeField] Vector3[] InfoPanelPos;
-
     [Header("Weapon Info")]
     [SerializeField] StoreWeaponBase weapon;
     [SerializeField] Image weaponImage;
@@ -24,19 +21,19 @@ public class WeaponPanelGridInfo : Singleton<WeaponPanelGridInfo>
     private void OnEnable() {
         RefeshGrid();
         // WeaponPanel.Instance.SetMaskState(true);
-        CancelBtn.onClick.AddListener(() => gameObject.SetActive(false));
+        CancelBtn.onClick.AddListener(OnCancelBtnClicked);
     }
 
     private void OnDisable() {
         // WeaponPanel.Instance.SetMaskState(false);
-        CancelBtn.onClick.RemoveListener(() => gameObject.SetActive(false));
+        CancelBtn.onClick.RemoveListener(OnCancelBtnClicked);
     }
 
     public void SetWeaponInfoPanel(int index) {
         this.weapon = GameManager.Instance.playerWeapons[index];
         RefeshGrid();
-        transform.position = InfoPanelPos[index];
-        // gameObject.SetActive(true);
+        WeaponPanel.Instance.SetMaskState(true);
+        gameObject.SetActive(true);
     }
 
     void RefeshGrid() {
@@ -54,5 +51,9 @@ public class WeaponPanelGridInfo : Singleton<WeaponPanelGridInfo>
         weaponAttrs.genSpecialInfo(weapon.weaponData.specialInfo);
     }
 
+    void OnCancelBtnClicked() {
+        gameObject.SetActive(false);
+        WeaponPanel.Instance.SetMaskState(false);
+    }
 
 }

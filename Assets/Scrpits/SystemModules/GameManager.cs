@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     public PlayerInput playerInput;
 
     [Header("Player")]
-    [SerializeField] GameObject playerPos;
+    [SerializeField] Player player;
 
     [Header("WaveManager")]
     [SerializeField] WaveManager waveManager;
@@ -23,13 +23,16 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] GemBar InGameGemBar;
     [SerializeField] GemBar StoreGemBar;
 
+    [Header("Player EXP")]
+    [SerializeField] HUDEXPBar hudEXPBar;
+    [SerializeField] AudioData[] levelUpSFX;
+    [SerializeField] GameObject  levelUpVFX;
+
     [Header("Player Guns")]
     public List<StoreWeaponBase> playerWeapons = new List<StoreWeaponBase>();
-    Player player;
 
     private void Start() {
-        player = playerPos.GetComponent<Player>();
-        player.SetWeaponsPos(playerWeapons);
+        OnWaveStart();
     }
 
     public void OnGemChangedInGame(int num) {
@@ -42,17 +45,29 @@ public class GameManager : Singleton<GameManager>
         StoreGemBar.StartCoroutine(StoreGemBar.UpdateGemNumCoroutine());
     }
 
+    public void ChangeEXP(int exp) {
+        PlayerAttr.Instance.ChangeCurrentEXP(exp);
+        hudEXPBar.UpdateStates(PlayerAttr.Instance.CurrentEXP, PlayerAttr.Instance.MaxEXP);
+    }
+
+    public void LevelUp() {
+        AudioManager.Instance.PoolPlayRandomSFX(levelUpSFX);
+        PoolManager.Release(levelUpVFX, player.transform.position);
+        PlayerAttr.Instance.LevelUp();
+    }
+
     public void OnWaveEnd() {
         waveManager.gameObject.SetActive(false);
         enemyManager.gameObject.SetActive(false);
         store.gameObject.SetActive(true);
     }
 
-    public void GoForNextWave() {
-        playerInput.EnableGameplayInput();
-        playerPos.transform.position = Vector3.zero;
-        player.SetWeaponsPos(playerWeapons);
-        
+    public void OnWaveStart() {
+        player.ResetPlayer();
+
+        InGameGemBar.Initialize();
+        hudEXPBar.Initialize(PlayerAttr.Instance.CurrentEXP, PlayerAttr.Instance.MaxEXP);
+
         store.gameObject.SetActive(false);
         enemyManager.gameObject.SetActive(true);
         waveManager.gameObject.SetActive(true);

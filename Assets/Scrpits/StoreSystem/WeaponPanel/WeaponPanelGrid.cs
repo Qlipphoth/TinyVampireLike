@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class WeaponPanelGrid : MonoBehaviour
 {
     [SerializeField] Image weaponImage;
+    [SerializeField] WeaponPanelGridInfo weaponPanelGridInfo;
     [SerializeField] int index;
 
     Button infoBtn;
@@ -18,7 +19,7 @@ public class WeaponPanelGrid : MonoBehaviour
         weaponImage.sprite = GameManager.Instance.
             playerWeapons[index].weaponData.weaponSprite;
         this.index = index;
-        infoBtn.onClick.AddListener(() => WeaponPanelGridInfo.Instance.SetWeaponInfoPanel(index));
+        infoBtn.onClick.AddListener(() => weaponPanelGridInfo.SetWeaponInfoPanel(index));
     }
 
 }

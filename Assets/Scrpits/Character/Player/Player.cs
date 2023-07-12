@@ -185,4 +185,21 @@ public class Player : Character
 
 #endregion
 
+# region Reset
+
+    public void ResetPlayer() {
+        health = maxHealth;
+        hudHP.Initialize(health, maxHealth);
+        onHeadHealthBar.Initialize(health, maxHealth);
+
+        playerCollider.enabled = true;
+        gameObject.SetActive(true);
+        transform.position = Vector3.zero;
+
+        input.EnableGameplayInput();
+        SetWeaponsPos(GameManager.Instance.playerWeapons);
+    }
+
+# endregion
+
 }

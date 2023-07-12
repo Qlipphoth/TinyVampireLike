@@ -15,7 +15,7 @@ public class HUDEXPBar : StatesBar
     public override void UpdateStates(float currentValue, float maxValue) {
         if (currentValue >= maxValue) {
             currentValue -= maxValue;
-            PlayerEXP.Instance.LevelUp();  // 调用经验系统的升级方法
+            GameManager.Instance.LevelUp();  // 调用经验系统的升级方法
             SetLevel();
             EmptyStates();  // 重置经验条
         }
@@ -23,7 +23,7 @@ public class HUDEXPBar : StatesBar
     }
 
     public void SetLevel() {
-        text.text = $"Lv {PlayerEXP.Instance.level}";
+        text.text = $"Lv {PlayerAttr.Instance.Level}";
     }
 
     // public override void UpdateStates(float currentValue, float maxValue) {

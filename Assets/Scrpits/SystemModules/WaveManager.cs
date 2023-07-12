@@ -34,6 +34,7 @@ public class WaveManager : Singleton<WaveManager>
 
     // 1. 每一波的波数显示及倒计时
     IEnumerator WaveTimer() {
+        
         while (curWaveTimer > 0) {
             yield return waitForOneSecond;
             curWaveTimer--;
@@ -46,6 +47,7 @@ public class WaveManager : Singleton<WaveManager>
 
         waveCompleteText.SetActive(true);  // 通关显示
         AudioManager.Instance.PoolPlaySFX(wavecompleteSFX);  // 通关音效
+        
         yield return waitForOneSecond;  
         yield return waitForOneSecond;  
         
