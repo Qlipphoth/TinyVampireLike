@@ -16,6 +16,7 @@ public class StoreItemBase : StoreObject
         foreach (ItemEffect effect in itemData.effects) {
             PlayerAttr.GetChangePlayerAttrFunc(effect.attr).Invoke(effect.value);
         }
+        PlayerStatsPanel.Instance.RefreshStatsPanel();  // 刷新玩家属性面板
     }
 
 }

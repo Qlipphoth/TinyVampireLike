@@ -21,7 +21,6 @@ public class GameManager : Singleton<GameManager>
 
     [Header("Gem Bars")]
     [SerializeField] GemBar InGameGemBar;
-    [SerializeField] GemBar StoreGemBar;
 
     [Header("Player EXP")]
     [SerializeField] HUDEXPBar hudEXPBar;
@@ -38,11 +37,6 @@ public class GameManager : Singleton<GameManager>
     public void OnGemChangedInGame(int num) {
         PlayerAttr.Instance.ChangeGemNum(num);
         InGameGemBar.StartCoroutine(InGameGemBar.UpdateGemNumCoroutine());
-    }
-    
-    public void OnGemChangedInStore(int num) {
-        PlayerAttr.Instance.ChangeGemNum(num);
-        StoreGemBar.StartCoroutine(StoreGemBar.UpdateGemNumCoroutine());
     }
 
     public void ChangeEXP(int exp) {

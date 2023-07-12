@@ -11,15 +11,16 @@ public class StoreItemGrid : MonoBehaviour
     [SerializeField] TMP_Text itemName;
     [SerializeField] TMP_Text itemCls;
     [SerializeField] ItemAttrs itemAttrs;
-    [SerializeField] Button buyBtn;
+    [SerializeField] ConsumeGemBtn buyBtn;
 
     private void OnEnable() {
         RefeshGrid();
-        buyBtn.onClick.AddListener(Buy);
+        buyBtn.Initialize(storeItem.itemData.itemPrice);
+        buyBtn.consumeGemBtn.onClick.AddListener(Buy);
     }
 
     private void OnDisable() {
-        buyBtn.onClick.RemoveListener(Buy);
+        buyBtn.consumeGemBtn.onClick.RemoveListener(Buy);
     }
 
     public void SetItemGrid(StoreItemBase item) {
@@ -40,10 +41,16 @@ public class StoreItemGrid : MonoBehaviour
     }
 
     public void Buy() {
-        storeItem.Buy();
-        Store.Instance.DeactivateLayout();
-        Destroy(gameObject);
-        PlayerStatsPanel.Instance.RefreshStatsPanel();
+        if (PlayerAttr.Instance.GemNum < storeItem.itemData.itemPrice) return;
+        PlayerAttr.Instance.GemNum -= storeItem.itemData.itemPrice;  // 花钱
+        storeItem.Buy();  // 购买
+        StoreObjectGridsArea.Instance.DeactivateLayout();  // 禁用布局
+        gameObject.SetActive(false);  // 禁用自身
+        Store.Instance.RefreshGem();  // 刷新商店宝石
+    }
+
+    public void RefreshBtn() {
+        buyBtn.IsGemEnough();
     }
 
 }

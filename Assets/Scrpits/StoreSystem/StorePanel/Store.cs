@@ -5,52 +5,47 @@ using UnityEngine.UI;
 
 public class Store : Singleton<Store>
 {
-    [SerializeField] GameObject storeItemGridPrefab;
-    [SerializeField] GameObject storeWeaponGridPrefab;
-    [SerializeField] Transform storeObjectGridArea;
     [SerializeField] List<StoreObject> storeObjects;
 
-    HorizontalLayoutGroup storeObjectGridAreaLayout;    
+    [Header("Store Gem Bar")]
+    [SerializeField] GemBar StoreGemBar;
+
+    [Header("Refresh Button")]
+    [SerializeField] ConsumeGemBtn RefreshBtn;
+    [SerializeField] int RefreshGemNum = 10;
+ 
     List<StoreObject> curStoreObjects = new List<StoreObject>();
     GameObject curGrid;
 
-    protected override void Awake() {
-        base.Awake();
-        storeObjectGridAreaLayout = storeObjectGridArea.gameObject.GetComponent<HorizontalLayoutGroup>();
-    }
-
     private void OnEnable() {
         RefeshStore();
-    }
- 
-    public void DeactivateLayout() {
-        storeObjectGridAreaLayout.enabled = false;
+        RefreshBtn.Initialize(RefreshGemNum);
+        RefreshBtn.consumeGemBtn.onClick.AddListener(() => RefreshStoreWithBtn());
     }
 
-    public void RefeshStore(int ItemNum = 4) {
+    private void OnDisable() {
+        RefreshBtn.consumeGemBtn.onClick.RemoveListener(() => RefreshStoreWithBtn());
+    }
+ 
+    private void RefeshStore(int ItemNum = 4) {
         for (int i = 0; i < ItemNum; i++) {
             curStoreObjects.Add(storeObjects[Random.Range(0, storeObjects.Count)]);
         }
-        RefeshGridArea(ref curStoreObjects);
+        StoreObjectGridsArea.Instance.RefreshGridsArea(ref curStoreObjects);
         curStoreObjects.Clear();
     }
 
-    private void RefeshGridArea(ref List<StoreObject> storeObjects) {
-        storeObjectGridAreaLayout.enabled = true;
-        // Clear all store items
-        foreach (Transform child in storeObjectGridArea) {
-            Destroy(child.gameObject);
-        }
-        // Generate store items
-        foreach (StoreObject storeObject in storeObjects) {
-            if (storeObject.isWeapon) {
-                curGrid = Instantiate(storeWeaponGridPrefab, storeObjectGridArea);
-                curGrid.GetComponent<StoreWeaponGrid>().SetWeaponGrid((StoreWeaponBase)storeObject);
-            }
-            else {
-                curGrid = Instantiate(storeItemGridPrefab, storeObjectGridArea);
-                curGrid.GetComponent<StoreItemGrid>().SetItemGrid((StoreItemBase)storeObject);
-            }
-        }
+    private void RefreshStoreWithBtn() {
+        if (PlayerAttr.Instance.GemNum < RefreshGemNum) return;
+        PlayerAttr.Instance.GemNum -= RefreshGemNum;
+        RefeshStore();
+        RefreshGem();
     }
+
+    public void RefreshGem() {
+        StoreGemBar.Initialize();
+        RefreshBtn.IsGemEnough();
+        StoreObjectGridsArea.Instance.RefreshBtns();
+    }
+
 }

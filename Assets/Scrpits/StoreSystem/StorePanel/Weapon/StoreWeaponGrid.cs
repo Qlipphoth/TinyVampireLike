@@ -11,15 +11,16 @@ public class StoreWeaponGrid : MonoBehaviour
     [SerializeField] TMP_Text weaponName;
     [SerializeField] TMP_Text weaponCls;
     [SerializeField] WeaponAttrs weaponAttrs;
-    [SerializeField] Button buyBtn;
+    [SerializeField] ConsumeGemBtn buyBtn;
 
     private void OnEnable() {
         RefeshGrid();
-        buyBtn.onClick.AddListener(Buy);
+        buyBtn.Initialize(weapon.weaponData.weaponPrice);
+        buyBtn.consumeGemBtn.onClick.AddListener(Buy);
     }
 
     private void OnDisable() {
-        buyBtn.onClick.RemoveListener(Buy);
+        buyBtn.consumeGemBtn.onClick.RemoveListener(Buy);
     }
 
     public void SetWeaponGrid(StoreWeaponBase weapon) {
@@ -45,9 +46,16 @@ public class StoreWeaponGrid : MonoBehaviour
     }
 
     public void Buy() {
-        weapon.Buy();
-        Store.Instance.DeactivateLayout();
-        Destroy(gameObject);
-        PlayerStatsPanel.Instance.RefreshStatsPanel();
+        if (PlayerAttr.Instance.GemNum < weapon.weaponData.weaponPrice) return;
+        PlayerAttr.Instance.GemNum -= weapon.weaponData.weaponPrice;  // 花钱
+        weapon.Buy();  // 购买
+        StoreObjectGridsArea.Instance.DeactivateLayout();  // 禁用布局
+        gameObject.SetActive(false);  // 禁用自身
+        Store.Instance.RefreshGem();  // 刷新商店宝石
     }
+
+    public void RefreshBtn() {
+        buyBtn.IsGemEnough();
+    }
+
 }
