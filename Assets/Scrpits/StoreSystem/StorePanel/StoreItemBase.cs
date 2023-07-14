@@ -10,13 +10,21 @@ public class StoreItemBase : StoreObject
 
     public override void Buy() {
         getItemBase();
+        PlayerStatsPanel.Instance.RefreshStatsPanel();  // 刷新玩家属性面板
+        ItemPanel.Instance.RefreshItemPanel();  // 刷新物品面板
     }
 
     private void getItemBase() {
         foreach (ItemEffect effect in itemData.effects) {
             PlayerAttr.GetChangePlayerAttrFunc(effect.attr).Invoke(effect.value);
         }
-        PlayerStatsPanel.Instance.RefreshStatsPanel();  // 刷新玩家属性面板
+
+        if (GameManager.Instance.playerItems.ContainsKey(this)) {
+            GameManager.Instance.playerItems[this]++;
+        } 
+        else {
+            GameManager.Instance.playerItems.Add(this, 1);
+        }
     }
 
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class Bullet : MonoBehaviour
 {
 
@@ -39,7 +39,7 @@ public class Bullet : MonoBehaviour
         hitPoint = other.GetContact(0).point;
         PoolManager.Release(explosionPrefab, hitPoint, Quaternion.identity);
          
-        if (other.gameObject.TryGetComponent<EnemyController>(out EnemyController enemy)) {
+        if (other.gameObject.TryGetComponent<Enemy>(out Enemy enemy)) {
             
             popupText = PoolManager.Release(popupTextPrefab, enemy.transform.position, 
                     Quaternion.identity).GetComponentInChildren<PopupText_Ani>();
@@ -47,7 +47,7 @@ public class Bullet : MonoBehaviour
             PoolManager.Release(hitPrefab, enemy.transform.position, Quaternion.Euler(0f, 0f, 
                 Mathf.Atan2(rigidbody2D.velocity.y, rigidbody2D.velocity.x) * Mathf.Rad2Deg));
 
-            damageInfo = DamageManager.Instance.GetDamage(damage);
+            damageInfo = DamageManager.Instance.GetPlayerDamage(damage);
             popupText.SetText(damageInfo.Key, damageInfo.Value);
             enemy.TakeDamage(damageInfo.Key);
         }

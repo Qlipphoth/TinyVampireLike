@@ -252,7 +252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bullets 2-Sheet_7
+      name: EnemyBullet2
       rect:
         serializedVersion: 2
         x: 299
@@ -288,7 +288,7 @@ TextureImporter:
       Bullets 2-Sheet_3: 1304115180
       Bullets 2-Sheet_4: -1410891119
       Bullets 2-Sheet_6: -664794434
-      Bullets 2-Sheet_7: -94915627
+      EnemyBullet2: -94915627
       UZIShell: 774962763
       UziBullet: 616769727
   spritePackingTag: 

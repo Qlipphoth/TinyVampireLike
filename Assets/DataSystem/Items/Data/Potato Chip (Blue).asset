@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: f5e1f0602e7cade44bd2ccce7a4f808c, type: 3}
   itemName: Potato Chip (Blue)
+  itemLevel: 0
   itemCls: 0
   effects:
   - attr: 0
-    value: -2
+    value: 5
   - attr: 1
     value: 5
   specialInfo: Clean and hygienic!
-  itemPrice: 23
+  itemPrice: 57

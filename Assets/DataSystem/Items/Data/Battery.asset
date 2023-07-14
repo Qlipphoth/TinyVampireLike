@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 99fcac763c9d6384b824c2ca95e1fdbd, type: 3}
   itemName: Battery
+  itemLevel: 1
   itemCls: 0
   effects:
   - attr: 7
-    value: 10
+    value: 8
   - attr: 3
-    value: 10
+    value: 40
   specialInfo: Power !!!
   itemPrice: 50

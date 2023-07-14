@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    [Header("Music")]
+    [SerializeField] AudioData bgm;
+
     [Header("Input")]
     public PlayerInput playerInput;
 
@@ -33,8 +36,9 @@ public class GameManager : Singleton<GameManager>
     [Header("Player Start Weapons")]
     public List<StoreWeaponBase> playerStartWeapons = new List<StoreWeaponBase>();
 
-    [Header("Player Weapons")]
+    [Header("Player Objects")]
     public List<StoreWeaponBase> playerWeapons = new List<StoreWeaponBase>();
+    public Dictionary<StoreItemBase, int> playerItems = new Dictionary<StoreItemBase, int>();
 
     StoreWeaponBase curWeapon;
 
@@ -43,6 +47,7 @@ public class GameManager : Singleton<GameManager>
             playerWeapons.Add(Instantiate(playerStartWeapons[i], transform));
         }
         OnWaveStart();
+        AudioManager.Instance.PlayMusic(bgm);
     }
 
     public void OnGemChangedInGame(int num) {
@@ -79,6 +84,17 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    public bool CraftWeapon(StoreWeaponBase weapon) {
+        for (int i = 0; i < playerWeapons.Count; i++) {
+            if ((playerWeapons[i].weaponData.weaponName == weapon.weaponData.weaponName) && 
+                (playerWeapons[i].weaponLevel == weapon.weaponLevel)) {
+                playerWeapons[i].weaponLevel++;
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void DestoryWeapon(int index) {
         curWeapon = playerWeapons[index];
         playerWeapons.RemoveAt(index);
@@ -87,12 +103,17 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void OnWaveEnd() {
+        if (waveManager.WaveNum == 5) {
+            GameEvents.GameWin?.Invoke();
+            return;
+        }
         waveManager.gameObject.SetActive(false);
         enemyManager.gameObject.SetActive(false);
         store.gameObject.SetActive(true);
     }
 
     public void OnWaveStart() {
+        CameraFollow.Instance.ResetCamera();
         player.ResetPlayer();
 
         InGameGemBar.Initialize();

@@ -519,7 +519,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.1}
   serializedVersion: 2
-  m_Radius: 0.15
+  m_Radius: 0.2
 --- !u!114 &8365171465541832070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,24 +529,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8365171465541832071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0917c15e93ad94490b3b9673941905, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f1b3bbc37c0efd48839ecef0af22bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
   onHeadHealthBar: {fileID: 3402402326472325352}
   showOnHeadHealthBar: 0
-  moveSpeed: 0.5
-  raycastDistance: 0.15
+  moveSpeed: 4
+  damage: 1
+  raycastDistance: 0.2
   raycastLayerMask:
     serializedVersion: 2
     m_Bits: 192
   enemyIsDead: 0
   hitVFX: {fileID: 976469477947047660, guid: 6e7de89e7ab0da2438c738589646aebe, type: 3}
-  hitAudioData:
-    audioClip: {fileID: 8300000, guid: a5ee51ac7d289c94dad493270144657b, type: 3}
-    volume: 0.3
-  shakeTime: 0.1
-  shakeStrength: 0.1
 --- !u!114 &8824430355651983000
 MonoBehaviour:
   m_ObjectHideFlags: 0

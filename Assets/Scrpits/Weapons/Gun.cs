@@ -47,7 +47,8 @@ public class Gun : MonoBehaviour
     void SingleFire() {
         animator.SetTrigger("Fire");
         // AudioManager.Instance.PlayRandomSFX(fireAudio);
-        AudioManager.Instance.PoolPlayRandomSFX(fireAudio);
+        // AudioManager.Instance.PoolPlayRandomSFX(fireAudio);
+        StartCoroutine(AudioManager.Instance.PoolPlayRandomSFX(fireAudio, Random.Range(0f, 0.1f)));
         
         bulletObject = PoolManager.Release(bulletPrefab, muzzlePoint.position, muzzlePoint.rotation);
         bullet = bulletObject.GetComponent<Bullet>();
@@ -66,7 +67,7 @@ public class Gun : MonoBehaviour
             return;
         }
         foreach (var collider in colliders) {
-            if (collider.TryGetComponent<EnemyController>(out EnemyController enemy) && !enemy.IsDead) {
+            if (collider.TryGetComponent<Enemy>(out Enemy enemy) && !enemy.IsDead) {
                 gunDirection = ((Vector2)(enemy.transform.position - transform.position)).normalized;
                 transform.right = gunDirection;  // 朝向敌人
                 if (fireTimer <= 0f) {

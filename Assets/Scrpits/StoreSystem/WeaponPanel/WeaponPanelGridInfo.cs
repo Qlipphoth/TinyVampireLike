@@ -40,6 +40,7 @@ public class WeaponPanelGridInfo : MonoBehaviour
         this.weapon = GameManager.Instance.playerWeapons[index];
         this.weaponLevel = weapon.weaponLevel;
         this.index = index;
+        if (this.weaponLevel == 4) CraftBtn.gameObject.SetActive(false);
         RefeshGrid();
         WeaponPanel.Instance.SetMaskState(true);
         gameObject.SetActive(true);

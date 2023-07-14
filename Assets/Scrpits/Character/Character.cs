@@ -40,7 +40,7 @@ public class Character : MonoBehaviour
         else HideOnHeadHealthBar();
     }
 
-    public void FlipCharacter() {
+    public virtual void FlipCharacter() {
         spriteRenderer.flipX = moveDirection.x < 0 ? true : false;
     }
 
@@ -77,41 +77,6 @@ public class Character : MonoBehaviour
         // AudioManager.Instance.PlayRandomSFX(deathAudioData);
         // PoolManager.Release(deathVFX, transform.position);
         gameObject.SetActive(false);
-    }
-
-    public virtual void RestoreHealth(float value) {
-        if (health == maxHealth) return;
-        health = Mathf.Clamp(health + value, 0, maxHealth);
-
-        if (showOnHeadHealthBar) {
-            onHeadHealthBar.UpdateStates(health, maxHealth);
-        }
-    }
-
-    /// <summary>
-    /// 持续回血功能
-    /// </summary>
-    /// <param name="waitTime"> 每次回血间隔时间 </param>
-    /// <param name="percent"> 每次回血百分比 </param>
-    /// <returns></returns>
-    protected IEnumerator HealthRegenerateCoroutine(WaitForSeconds waitTime, float percent) {
-        while (health < maxHealth) {
-            yield return waitTime;
-            RestoreHealth(maxHealth * percent);
-        }
-    }
-
-    /// <summary>
-    /// 持续掉血功能
-    /// </summary>
-    /// <param name="waitTime"> 每次掉血间隔 </param>
-    /// <param name="percent"> 每次掉血百分比 </param>
-    /// <returns></returns>
-    protected IEnumerator DamageOverTimeCoroutine(WaitForSeconds waitTime, float percent) {
-        while (health > 0f) {
-            yield return waitTime;
-            TakeDamage(maxHealth * percent);
-        }
     }
 
 }

@@ -9,7 +9,7 @@ public class PlayerAttr : Singleton<PlayerAttr>
 {
     [Header("Player Attributes")]
     [SerializeField] int maxHealth = 10;      // 玩家的生命值上限
-    [SerializeField] int healthRegeRate = 0;  // 血量回复速度, 单位：% / s, 最终的回复速度为每秒回复：maxHealth * healthRegeRate / 100
+    [SerializeField] int healthRegeRate = 0;  // 生命值回复速度，单位：/ 10s, 值为 10 的话，即每 10s 回复 10 点生命值
     [SerializeField] int damageFactor = 0;    // 伤害值，单位：%。最终的伤害值为：damage * (1 + damageFactor / 100)
     [SerializeField] int attackRangeFactor = 0;  // 攻击范围，单位：%。最终的攻击范围为：weaponAttackRange * (1 + attackRangeFactor / 100)  
     [SerializeField] int armor = 0;           // 护甲值，单位：%。最终的伤害值为：damage * (1 - Armor / 100)

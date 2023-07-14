@@ -9,6 +9,9 @@ public class GemBar : MonoBehaviour
 
     private void Awake() {
         gemNumText = GetComponentInChildren<TMP_Text>();
+    }
+
+    private void OnEnable() {
         SetGemNum(PlayerAttr.Instance.GemNum);
     }
 

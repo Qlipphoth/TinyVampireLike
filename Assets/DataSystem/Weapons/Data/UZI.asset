@@ -22,6 +22,7 @@ MonoBehaviour:
     - 2
     - 4
     - 8
+    - 12
   fireRate:
     attr: 1
     value:
@@ -29,6 +30,7 @@ MonoBehaviour:
     - 0.6
     - 0.4
     - 0.2
+    - 0.1
   range:
     attr: 2
     value:
@@ -36,6 +38,7 @@ MonoBehaviour:
     - 3
     - 3
     - 3
+    - 5
   otherEffects: []
   weaponPrice: 30
   specialInfo: UZI

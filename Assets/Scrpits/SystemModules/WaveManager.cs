@@ -14,15 +14,15 @@ public class WaveManager : Singleton<WaveManager>
     [SerializeField] AudioData wavecompleteSFX;
 
     [Header("Wave Settings")]
-    [SerializeField] int waveNum, waveTimer;
+    [SerializeField] int waveNum, waveTime;
 
     public int WaveNum => waveNum;   
     int curWaveTimer;
     WaitForSeconds waitForOneSecond = new WaitForSeconds(1f);
 
     private void OnEnable() {
-        curWaveTimer = waveTimer;
-        waveNumText.text = ($"Wave {waveNum++}").ToString();
+        curWaveTimer = waveTime + waveNum * 5;
+        waveNumText.text = ($"Wave {++waveNum}").ToString();
         waveTimerText.text = curWaveTimer.ToString();
         waveCompleteText.SetActive(false);
         StartCoroutine(nameof(WaveTimer));

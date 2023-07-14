@@ -6,6 +6,9 @@ public class Player : Character
 {
     [Header("HUD")]
     [SerializeField] HUDHPBar hudHP;
+    [SerializeField] GameObject HpRegenEffect;
+    [SerializeField] GameObject dodgeEffect;
+    [SerializeField] GameObject popUpTextPrefab;
 
     [Header("Weapon Position")]
     [SerializeField] Transform weaponPosition2;
@@ -16,23 +19,25 @@ public class Player : Character
     [SerializeField] PlayerInput input;
 
     [Header("Move")]
-    [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float moveSpeed = 5f;
     [SerializeField] float accelerationTime = 3f;
     [SerializeField] float decelerationTime = 3f;
     
     [Header("Player Stats")]
-    [SerializeField] float pickUpRange = 2.5f;
+    [SerializeField] float pickUpRange = 1f;
     [SerializeField] LayerMask pickUpLayerMask;
     
     [Header("Hurt")]
     [SerializeField] float mutekiTime = 1f;
+    [SerializeField] AudioData hurtAudio;
 
     Collider2D playerCollider;
+    PopupText_Ani popupText;
 
     Vector2 curVelocity;
     float elapsedTime;
 
-    Coroutine moveCoroutine;
+    Coroutine moveCoroutine, HpRegenCoroutine;
     WaitForFixedUpdate waitForFixedUpdate = new WaitForFixedUpdate();
     WaitForSeconds waitForMuteki;
     Collider2D[] colliders; 
@@ -48,7 +53,6 @@ public class Player : Character
     private void Start() {
         input.EnableGameplayInput();
         hudHP.Initialize(health, maxHealth);
-        TakeDamage(10f);
     }
 
     private void Update() {
@@ -69,18 +73,35 @@ public class Player : Character
 #region Override
 
     public override void TakeDamage(float damage) {
-        base.TakeDamage(damage);
-        hudHP.UpdateStates(health, maxHealth);
-
-        if (gameObject.activeSelf) {
-            StartCoroutine(nameof(MutekiCoroutine));
+        KeyValuePair<float, bool> damageInfo = DamageManager.Instance.GetEnemyDamage(damage);
+        if (!damageInfo.Value) {
+            PoolManager.Release(dodgeEffect, transform.position, Quaternion.identity);
+            return;
         }
 
+        base.TakeDamage(damageInfo.Key);
+        popupText = PoolManager.Release(popUpTextPrefab, transform.position, 
+                    Quaternion.identity).GetComponentInChildren<PopupText_Ani>();
+        popupText.SetText(damageInfo.Key, false);
+        hudHP.UpdateStates(health, maxHealth);
+
+
+        AudioManager.Instance.PoolPlayRandomSFX(hurtAudio);
+        AttackSense.Instance.CameraShake(0.3f, 0.08f);
+        
+        if (gameObject.activeSelf) {
+            StartCoroutine(nameof(MutekiCoroutine));
+            if (PlayerAttr.Instance.HealthRegeRate > 0) {
+                if (HpRegenCoroutine != null) StopCoroutine(HpRegenCoroutine);
+                HpRegenCoroutine = StartCoroutine(HealthRegenCoroutine(10f / PlayerAttr.Instance.HealthRegeRate));
+            }
+        }
     }
 
     public override void Die() {
         hudHP.UpdateStates(0, maxHealth);
         base.Die();
+        GameEvents.GameOver?.Invoke();
     }
 
 #endregion
@@ -147,6 +168,29 @@ public class Player : Character
         Gizmos.DrawWireSphere(transform.position, pickUpRange);
     }
 
+    #endregion
+
+#region HPRegen
+
+    public void RestoreHealth(float value) {
+        if (health == maxHealth) return;
+        health = Mathf.Clamp(health + value, 0, maxHealth);
+
+        if (showOnHeadHealthBar) {
+            onHeadHealthBar.UpdateStates(health, maxHealth);
+        }
+        hudHP.UpdateStates(health, maxHealth);
+    }
+
+    protected IEnumerator HealthRegenCoroutine(float Interval) {
+        WaitForSeconds waitForinterval = new WaitForSeconds(Interval);
+        while (health < maxHealth) {
+            yield return waitForinterval;
+            RestoreHealth(1);
+            PoolManager.Release(HpRegenEffect, transform.position, Quaternion.identity);
+        }
+    }
+
 #endregion
 
 #region Miscs
@@ -190,7 +234,14 @@ public class Player : Character
 
 # region Reset
 
+    private void UpdateAttrs() {
+        maxHealth = PlayerAttr.Instance.MaxHealth;
+        moveSpeed = 5 * (1 + (float)PlayerAttr.Instance.MoveSpeedFactor / 100);
+        pickUpRange = 1 * (1 + (float)PlayerAttr.Instance.PickUpRangeFactor / 100);
+    }
+
     public void ResetPlayer() {
+        UpdateAttrs();
         health = maxHealth;
         hudHP.Initialize(health, maxHealth);
         onHeadHealthBar.Initialize(health, maxHealth);

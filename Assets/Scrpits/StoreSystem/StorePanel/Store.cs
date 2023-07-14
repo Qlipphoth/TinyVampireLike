@@ -19,6 +19,7 @@ public class Store : Singleton<Store>
 
     private void OnEnable() {
         RefeshStore();
+        // StoreGemBar.Initialize();
         RefreshBtn.Initialize(RefreshGemNum);
         RefreshBtn.consumeGemBtn.onClick.AddListener(() => RefreshStoreWithBtn());
     }

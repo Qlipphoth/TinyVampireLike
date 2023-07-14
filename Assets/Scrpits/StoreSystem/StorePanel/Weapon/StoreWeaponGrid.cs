@@ -50,6 +50,7 @@ public class StoreWeaponGrid : MonoBehaviour
 
     public void Buy() {
         if (PlayerAttr.Instance.GemNum < weapon.weaponData.weaponPrice) return;
+        if (GameManager.Instance.playerWeapons.Count == 6 && !GameManager.Instance.CraftWeapon(weapon)) return;
         PlayerAttr.Instance.GemNum -= weapon.weaponData.weaponPrice;  // 花钱
         weapon.Buy();  // 购买
         StoreObjectGridsArea.Instance.DeactivateLayout();  // 禁用布局

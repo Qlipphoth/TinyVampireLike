@@ -11,7 +11,7 @@ public struct MapBound
 
 
 // 实现摄像机跟随功能，也可以使用cinemaMachine
-public class CameraFollow : MonoBehaviour
+public class CameraFollow : Singleton<CameraFollow>
 {
     public Transform target;  // 摄像机跟随的玩家
     public float smoothTime = 0.4f; 
@@ -45,6 +45,10 @@ public class CameraFollow : MonoBehaviour
 
         // 更新摄像机位置
         transform.position = newPosition;
+    }
+
+    public void ResetCamera() {
+        transform.position = new Vector3(0f, 0f, -10f);
     }
 
 }

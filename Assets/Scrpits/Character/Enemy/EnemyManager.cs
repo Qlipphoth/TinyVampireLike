@@ -12,8 +12,15 @@ public class EnemyManager : Singleton<EnemyManager>
     [SerializeField] float spawnTime = 3f;
     [SerializeField] float spwanRadius = 1.5f;
 
+    [Header("Boss")]
+    [SerializeField] GameObject bossPrefab;
+    [SerializeField] Transform bossSpawnPoint;
+
     List<Vector2> spawnPosList = new List<Vector2>();
     List<GameObject> enemyList = new List<GameObject>();
+
+    List<int> wave2EnemyNumMin = new List<int> {1, 3, 5, 6, 6};
+    List<int> wave2EnemyNumMax = new List<int> {5, 6, 10, 10, 10};
 
     int i;
     Vector2 spawnPos;
@@ -21,9 +28,10 @@ public class EnemyManager : Singleton<EnemyManager>
     WaitForSeconds waitSpawnTime;
     WaitForSeconds waitSpawnWarningTime = new WaitForSeconds(1f);
     WaitForSeconds waitSpwanInterval = new WaitForSeconds(0.04f);
+    Coroutine spawnBossCoroutine;
 
     public List<GameObject> allEnemies = new List<GameObject>();
-    EnemyController curEnemy;
+    Enemy curEnemy;
 
     protected override void Awake() {
         base.Awake();
@@ -38,12 +46,25 @@ public class EnemyManager : Singleton<EnemyManager>
         StopAllCoroutines();
     }
 
+    private int Wave2EnemyNum(int waveNum) {
+        return Random.Range(wave2EnemyNumMin[waveNum - 1], wave2EnemyNumMax[waveNum - 1]);
+    }
+
+    private List<float> Wave2EnemyAttrs(int waveNum) {
+        return new List<float> {
+            Random.Range(4, 6f) * waveNum,
+            Random.Range(1, 3f) + waveNum,
+            Random.Range(1, 2f) + (float)(waveNum / 10), 
+        };
+    }
+
     IEnumerator SpawnEnemy() {
-        while (true) {
-            if (WaveManager.Instance.WaveNum == 2) {
-                StartCoroutine(SpawnEnemies(Random.Range(1, 3)));
+        yield return waitSpawnWarningTime;
+        while (gameObject.activeSelf) {
+            if (WaveManager.Instance.WaveNum == 5 && spawnBossCoroutine == null) {
+                spawnBossCoroutine = StartCoroutine(SpawnBoss());
             }
-            else StartCoroutine(SpawnEnemies(Random.Range(1, 10)));
+            StartCoroutine(SpawnEnemies(Wave2EnemyNum(WaveManager.Instance.WaveNum)));
             yield return waitSpawnTime;
         }
     }
@@ -67,10 +88,20 @@ public class EnemyManager : Singleton<EnemyManager>
         yield return waitSpawnWarningTime;
         
         for (i = 0; i < enemyNum; i++) {
-            yield return waitSpwanInterval;
+            // yield return waitSpwanInterval;
             enemy = PoolManager.Release(enemyList[i], spawnPosList[i], Quaternion.identity);
+            enemy.GetComponent<Enemy>().SetAttrs(Wave2EnemyAttrs(enemyNum));
             allEnemies.Add(enemy);
         }
+    }
+
+    IEnumerator SpawnBoss() {
+        yield return waitSpawnWarningTime;
+        PoolManager.Release(spwanWarning, bossSpawnPoint.position, Quaternion.identity, new Vector3(2f, 2f, 1f));
+        yield return waitSpawnWarningTime;
+        enemy = PoolManager.Release(bossPrefab, bossSpawnPoint.position, Quaternion.identity);
+        allEnemies.Add(enemy);
+        // TODO: 显示及其他
     }
 
     public void RemoveEnemy(GameObject enemy) {
@@ -90,7 +121,7 @@ public class EnemyManager : Singleton<EnemyManager>
 
         // 只有反向遍历可以 SlayAll
         for (int i = allEnemies.Count - 1; i >= 0; i--) {
-            curEnemy = allEnemies[i].GetComponent<EnemyController>();
+            curEnemy = allEnemies[i].GetComponent<Enemy>();
             if (isDropLoot) curEnemy.Die();
             else curEnemy.DieWithoutLoot();
         }

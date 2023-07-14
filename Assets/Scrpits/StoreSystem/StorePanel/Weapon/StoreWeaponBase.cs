@@ -11,7 +11,7 @@ public class StoreWeaponBase : StoreObject
     public int weaponLevel;
 
     public override void Buy() {
-        getWeaponBase();
+        if (GameManager.Instance.playerWeapons.Count != 6) getWeaponBase();
         WeaponPanel.Instance.RefreshWeaponPanel();
     }
 
