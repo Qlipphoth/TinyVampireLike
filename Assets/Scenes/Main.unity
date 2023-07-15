@@ -3225,7 +3225,7 @@ MonoBehaviour:
     size: 5
   lootsPools:
   - prefab: {fileID: 3237339127140296770, guid: 6e218b1d6bd64b4429d5c7fb9acd1b48, type: 3}
-    size: 30
+    size: 35
   - prefab: {fileID: 3237339127140296770, guid: b58256ad850a5db4b8bd2b99d2d0470f, type: 3}
     size: 30
   - prefab: {fileID: 3237339127140296770, guid: dbc3039c2a85fc24aa850dbc97f4ded4, type: 3}

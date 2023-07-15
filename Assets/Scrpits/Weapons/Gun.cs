@@ -66,16 +66,27 @@ public class Gun : MonoBehaviour
             transform.right = gunDirection;  // 朝向右边
             return;
         }
-        foreach (var collider in colliders) {
-            if (collider.TryGetComponent<Enemy>(out Enemy enemy) && !enemy.IsDead) {
-                gunDirection = ((Vector2)(enemy.transform.position - transform.position)).normalized;
-                transform.right = gunDirection;  // 朝向敌人
-                if (fireTimer <= 0f) {
-                    SingleFire();
-                    fireTimer = DamageManager.Instance.GetFireRate(fireRate);
-                }
+        
+        Collider2D randomEnemy = colliders[Random.Range(0, colliders.Length)];
+        if (randomEnemy.TryGetComponent<Enemy>(out Enemy enemy) && !enemy.IsDead) {
+            gunDirection = ((Vector2)(enemy.transform.position - transform.position)).normalized;
+            transform.right = gunDirection;  // 朝向敌人
+            if (fireTimer <= 0f) {
+                SingleFire();
+                fireTimer = DamageManager.Instance.GetFireRate(fireRate);
             }
         }
+        
+        // foreach (var collider in colliders) {
+        //     if (collider.TryGetComponent<Enemy>(out Enemy enemy) && !enemy.IsDead) {
+        //         gunDirection = ((Vector2)(enemy.transform.position - transform.position)).normalized;
+        //         transform.right = gunDirection;  // 朝向敌人
+        //         if (fireTimer <= 0f) {
+        //             SingleFire();
+        //             fireTimer = DamageManager.Instance.GetFireRate(fireRate);
+        //         }
+        //     }
+        
     }
 
     void AutoFlip() {
