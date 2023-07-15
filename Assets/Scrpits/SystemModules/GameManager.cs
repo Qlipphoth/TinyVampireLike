@@ -63,7 +63,7 @@ public class GameManager : Singleton<GameManager>
     public void LevelUp() {
         AudioManager.Instance.PoolPlayRandomSFX(levelUpSFX);
         PoolManager.Release(levelUpVFX, player.transform.position);
-        PlayerAttr.Instance.LevelUp();
+        GameEvents.LevelUp?.Invoke();
     }
 
     public void SaleWeapon(int index) {

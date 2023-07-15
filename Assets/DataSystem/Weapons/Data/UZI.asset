@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 444c4242206fcb249a2f0f58c66af1c3, type: 3}
-  m_Name: UZI
+  m_Name: Uzi
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: 302903190, guid: 2f1a6469b7bd5284a801268b4b67efb1, type: 3}
-  weaponName: UZI
+  weaponName: Uzi
   weaponCls: 0
   damage:
     attr: 0

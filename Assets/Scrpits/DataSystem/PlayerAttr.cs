@@ -43,7 +43,6 @@ public class PlayerAttr : Singleton<PlayerAttr>
     public float CurrentEXP { get => currentEXP; set => currentEXP = value; }
     public float MaxEXP { get => maxEXP; set => maxEXP = value; }
 
-
     public List<int> GetPlayerAttrs() {
         return new List<int> {
             maxHealth,
@@ -96,6 +95,10 @@ public class PlayerAttr : Singleton<PlayerAttr>
         };
     }
 
+    private void OnEnable() {
+        GameEvents.LevelUp += LevelUp;
+    }
+
     private void OnDisable() {
         ChangePlayerAttrFuncDict.Clear();
     }
@@ -105,7 +108,7 @@ public class PlayerAttr : Singleton<PlayerAttr>
 
     public void LevelUp() {
         currentEXP -= maxEXP;
-        maxEXP *= 1.5f;
+        maxEXP *= 1.2f;
         level++;
     }
 

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: EXPOnWorld 2
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 3237339127140296770, guid: b58256ad850a5db4b8bd2b99d2d0470f, type: 3}
-  dropRate: 20
+  dropRate: 50

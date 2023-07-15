@@ -7,7 +7,7 @@ public class GolemLaser : MonoBehaviour
     [SerializeField] float damage = 10f;
     [SerializeField] GameObject hitPlayerVFX;
     [SerializeField] GameObject hitEnemyVFX;
-
+    
     private void OnCollisionStay2D(Collision2D other) {
         if (other.gameObject.TryGetComponent<Player>(out Player player)) {
             player.TakeDamage(damage);

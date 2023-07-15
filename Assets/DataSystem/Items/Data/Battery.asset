@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: 99fcac763c9d6384b824c2ca95e1fdbd, type: 3}
   itemName: Battery
-  itemLevel: 1
+  itemLevel: 2
   itemCls: 0
   effects:
   - attr: 7

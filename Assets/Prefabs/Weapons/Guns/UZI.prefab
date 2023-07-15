@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1173686048336403596}
   - component: {fileID: 371447648644230996}
   m_Layer: 0
-  m_Name: UZI
+  m_Name: Uzi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,17 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69b15b0338b1114a8ec640042e34ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: dcae04f2cca7c9c48a9f6a0ec37d517d, type: 2}
   bulletPrefab: {fileID: 5988753799876687129, guid: cb601b3d8b058bd48902bfdb8c9720fa, type: 3}
   shellPrefab: {fileID: 5597762272729807094, guid: b6c8a2eb12cca844c916d6ea43e02a36, type: 3}
   muzzlePoint: {fileID: 5231498311311945999}
   shellPoint: {fileID: 7238144273571499478}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 16448
   fireAudio:
     audioClip: {fileID: 8300000, guid: 5420bf2595bf4e746a151bcead4d3ddf, type: 3}
-    volume: 0.1
+    volume: 0.3
 --- !u!1 &4032986754879220823
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +162,7 @@ SpriteRenderer:
   m_SortingLayerID: 538913977
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1077766956, guid: 43633dbc1f8cdcf488daf59eff207b39, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 78ceee48a7a3c7c4c8032f4d760106ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

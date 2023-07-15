@@ -48,7 +48,7 @@ public class Gun : MonoBehaviour
         animator.SetTrigger("Fire");
         // AudioManager.Instance.PlayRandomSFX(fireAudio);
         // AudioManager.Instance.PoolPlayRandomSFX(fireAudio);
-        StartCoroutine(AudioManager.Instance.PoolPlayRandomSFX(fireAudio, Random.Range(0f, 0.1f)));
+        StartCoroutine(AudioManager.Instance.PoolPlayRandomSFX(fireAudio, Random.Range(0.04f, 0.1f)));
         
         bulletObject = PoolManager.Release(bulletPrefab, muzzlePoint.position, muzzlePoint.rotation);
         bullet = bulletObject.GetComponent<Bullet>();
@@ -86,6 +86,10 @@ public class Gun : MonoBehaviour
         this.damage = weaponData.damage.value[weaponLevel];
         this.gunRange = weaponData.range.value[weaponLevel];
         this.fireRate = weaponData.fireRate.value[weaponLevel];
+    }
+
+    public void SetGunMaterial(Material material) {
+        spriteRenderer.material = material;
     }
 
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -38,11 +39,21 @@ public class GameOverForm : MonoBehaviour
     }
 
     private void GameWin(){
+        EnemyManager.Instance.SlayAll();
+        GameManager.Instance.playerInput.DisableAllInputs();
+        WaveManager.Instance.gameObject.SetActive(false);
+        EnemyManager.Instance.gameObject.SetActive(false);
+        PoolManager.Instance.DeActivateAllLoots();
+        StartCoroutine(WinCoroutine());
+    }
+
+    IEnumerator WinCoroutine() {
+        yield return 0.5f;
         Title.text = "YOU WIN !";
         Title.color = Color.green;
         masks.SetActive(true);
-        EnemyManager.Instance.SlayAll();
     }
+    
 
     //==================== 按钮的功能 ==================//
     private void OnMenuButtonClick(){

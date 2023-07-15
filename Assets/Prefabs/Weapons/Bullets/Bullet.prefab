@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: eff5cc9dd76ca814e9db510ebb610ce8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,7 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  criticalRate: 0.4
   explosionPrefab: {fileID: 5465811056228018583, guid: d2007ec39982b7a4681b4fcd9a73b2ef, type: 3}
   hitPrefab: {fileID: 976469477947047660, guid: 78869d2821394994ab542f116bcf4f0d, type: 3}
   popupTextPrefab: {fileID: 6790492917363508354, guid: cf10aa51d183f3a4489626e6b34963c5, type: 3}

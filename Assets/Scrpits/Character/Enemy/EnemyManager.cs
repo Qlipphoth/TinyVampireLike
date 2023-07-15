@@ -52,9 +52,9 @@ public class EnemyManager : Singleton<EnemyManager>
 
     private List<float> Wave2EnemyAttrs(int waveNum) {
         return new List<float> {
-            Random.Range(4, 6f) * waveNum,
+            Random.Range(4, 6f) * waveNum / 2,
             Random.Range(1, 3f) + waveNum,
-            Random.Range(1, 2f) + (float)(waveNum / 10), 
+            Random.Range(1, 2f) + (float)(waveNum / 5), 
         };
     }
 

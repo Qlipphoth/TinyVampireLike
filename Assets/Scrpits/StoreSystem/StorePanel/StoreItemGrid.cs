@@ -12,6 +12,9 @@ public class StoreItemGrid : MonoBehaviour
     [SerializeField] TMP_Text itemCls;
     [SerializeField] ItemAttrs itemAttrs;
     [SerializeField] ConsumeGemBtn buyBtn;
+    [SerializeField] Image background;
+
+    int itemLevel;
 
     private void OnEnable() {
         RefeshGrid();
@@ -25,10 +28,17 @@ public class StoreItemGrid : MonoBehaviour
 
     public void SetItemGrid(StoreItemBase item) {
         storeItem = item;
+        itemLevel = storeItem.itemData.itemLevel;
         RefeshGrid();
     }
 
     void RefeshGrid() {
+        background.color = new Color(
+            GameManager.Instance.bgColors[itemLevel].r, 
+            GameManager.Instance.bgColors[itemLevel].g, 
+            GameManager.Instance.bgColors[itemLevel].b, 
+            background.color.a);
+
         itemImage.sprite = storeItem.itemData.itemSprite;
         itemName.text = storeItem.itemData.itemName;
         itemCls.text = EnumAttrs.getItemCls(storeItem.itemData.itemCls);

@@ -12,6 +12,7 @@ public class StoreWeaponGrid : MonoBehaviour
     [SerializeField] TMP_Text weaponCls;
     [SerializeField] WeaponAttrs weaponAttrs;
     [SerializeField] ConsumeGemBtn buyBtn;
+    [SerializeField] Image background;
 
     int weaponLevel;
 
@@ -32,6 +33,12 @@ public class StoreWeaponGrid : MonoBehaviour
     }
 
     void RefeshGrid() {
+        background.color = new Color(
+            GameManager.Instance.bgColors[weaponLevel].r, 
+            GameManager.Instance.bgColors[weaponLevel].g, 
+            GameManager.Instance.bgColors[weaponLevel].b, 
+            background.color.a);
+
         weaponImage.sprite = weapon.weaponData.weaponSprite;
         weaponName.text = weapon.weaponData.weaponName;
         weaponCls.text = EnumAttrs.getWeaponCls(weapon.weaponData.weaponCls);

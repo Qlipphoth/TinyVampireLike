@@ -14,12 +14,18 @@ public class BossGolem : Enemy
 
     [Header("Skill1")]
     [SerializeField] GameObject bulletPrefab;
+    [SerializeField] AudioData skill1SFX;
     [SerializeField] int bulletNum = 20;
     [SerializeField] float skill1Interval = 5f;
     [SerializeField] float radius = 5f;
 
     [Header("SkillLaser")]
     [SerializeField] float skillLaserInterval = 10f;
+    [SerializeField] AudioData ChargeSFX;
+    [SerializeField] AudioData LaserSFX;
+
+    [Header("Rage")]
+    [SerializeField] AudioData rageSFX;
 
     Vector2 curTargetPos;
     float skillLaserTimer = 10f;
@@ -44,6 +50,11 @@ public class BossGolem : Enemy
         Move();
     }
 
+    public override void Die() {
+        base.Die();
+        GameEvents.GameWin?.Invoke();
+    }
+
     public override void FlipCharacter() {
         transform.localScale = new Vector3(moveDirection.x > 0 ? 1 : -1, 1, 1);
         onHeadHealthBar.transform.localScale = new Vector3(moveDirection.x > 0 ? 1 : -1, 1, 1);
@@ -51,17 +62,23 @@ public class BossGolem : Enemy
 
     private IEnumerator SkillLaser() {
         isInSkill = true;
+        AttackSense.Instance.CameraShake(0.5f, 0.05f);
         animator.SetTrigger(String2Num.LASER);
         skillLaserTimer = skillLaserInterval;
-        yield return new WaitForSeconds(5f);
+
+        AudioManager.Instance.PoolPlayRandomSFX(ChargeSFX);
+        yield return new WaitForSeconds(1f);
+        AudioManager.Instance.PoolPlayRandomSFX(LaserSFX);
+        yield return new WaitForSeconds(3f);
         isInSkill = false;
     }
 
     private IEnumerator Skill1() {
         isInSkill = true;
         animator.SetTrigger(String2Num.SKILL1);
+        AudioManager.Instance.PoolPlayRandomSFX(skill1SFX);
         yield return new WaitForSeconds(1f);
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < bulletNum; i++) {
             EnemyBullet bullet = PoolManager.Release(bulletPrefab, transform.position + Random.insideUnitSphere * radius, 
                 Quaternion.identity).GetComponent<EnemyBullet>();
             bullet.SetDamage(damage);
@@ -90,8 +107,6 @@ public class BossGolem : Enemy
 
     private void RageMove() {
         moveDirection = (target.transform.position - transform.position).normalized;
-        FlipCharacter();
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
     }
 
     private void OnDrawGizmosSelected() {
@@ -101,11 +116,14 @@ public class BossGolem : Enemy
     }
 
     private void RageMode() {
-        bulletNum += 10;
+        AudioManager.Instance.PoolPlayRandomSFX(rageSFX);
+        bulletNum *= 3;
         radius *= 1.5f;
         damage *= 1.5f;
+        moveSpeed += 0.5f;
         skill1Interval /= 2f;
-        skillLaserInterval *= 10f;
+        skillLaserInterval *= 100f;
+        skillLaserTimer = skillLaserInterval;
         changeTargetInterval /= 2f;
         isInRage = true;
     }

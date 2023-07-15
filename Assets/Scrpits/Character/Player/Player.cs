@@ -9,6 +9,7 @@ public class Player : Character
     [SerializeField] GameObject HpRegenEffect;
     [SerializeField] GameObject dodgeEffect;
     [SerializeField] GameObject popUpTextPrefab;
+    [SerializeField] AudioData hpRegenSfx;
 
     [Header("Weapon Position")]
     [SerializeField] Transform weaponPosition2;
@@ -63,11 +64,13 @@ public class Player : Character
         base.OnEnable();
         input.OnMoveEvent += Move;
         input.OnStopMoveEvent += StopMove;
+        GameEvents.LevelUp += LevelUp;
     }
 
     private void OnDisable() {
         input.OnMoveEvent -= Move;
         input.OnStopMoveEvent -= StopMove;
+        GameEvents.LevelUp -= LevelUp;
     }
 
 #region Override
@@ -187,8 +190,21 @@ public class Player : Character
         while (health < maxHealth) {
             yield return waitForinterval;
             RestoreHealth(1);
+            // AudioManager.Instance.PoolPlayRandomSFX(hpRegenSfx);
             PoolManager.Release(HpRegenEffect, transform.position, Quaternion.identity);
         }
+    }
+
+#endregion
+
+#region LevelUp
+
+    public void LevelUp() {
+        PlayerAttr.Instance.ChangeMaxHealth(5);
+        maxHealth = PlayerAttr.Instance.MaxHealth;
+        health = maxHealth;
+        hudHP.UpdateStates(health, maxHealth);
+        onHeadHealthBar.UpdateStates(health, maxHealth);
     }
 
 #endregion
@@ -227,6 +243,8 @@ public class Player : Character
         for (int i = 0; i < weaponNum; i++) {
             curWeaopn = Instantiate(weapons[i].weaponPrefab, WeaponPos.GetChild(i)).GetComponent<Gun>();
             curWeaopn.SetGunAttrs(weapons[i].weaponData, weapons[i].weaponLevel);
+            curWeaopn.SetGunMaterial(ResourcesManager.Instance.LoadWeaponMaterial(
+                weapons[i].weaponData.weaponName, weapons[i].weaponLevel));
         }
     }
 

@@ -631,7 +631,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 70c500e3f9a702743946d084c36b42c6, type: 3}
+  m_Sprite: {fileID: -195321215, guid: 6217b7e11307ad64884406331d3ca2ce, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -659,6 +659,7 @@ MonoBehaviour:
   weaponCls: {fileID: 9213211957845031061}
   weaponAttrs: {fileID: 1571876057899375697}
   buyBtn: {fileID: 5106113343561174813}
+  background: {fileID: 9213211957845158624}
 --- !u!1 &9213211958388453884
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,7 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6981132, g: 0.58944464, b: 0.58944464, a: 1}
+  m_Color: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -819,6 +820,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9213211957845158631}
     m_Modifications:
+    - target: {fileID: 113495380619097380, guid: dfd59d0ddbe9a5e4e9c680856dd73eb5, type: 3}
+      propertyPath: m_Color.a
+      value: 0.41960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 113495380619097380, guid: dfd59d0ddbe9a5e4e9c680856dd73eb5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6745283
+      objectReference: {fileID: 0}
+    - target: {fileID: 113495380619097380, guid: dfd59d0ddbe9a5e4e9c680856dd73eb5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9451837
+      objectReference: {fileID: 0}
+    - target: {fileID: 113495380619097380, guid: dfd59d0ddbe9a5e4e9c680856dd73eb5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 113495380619097382, guid: dfd59d0ddbe9a5e4e9c680856dd73eb5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

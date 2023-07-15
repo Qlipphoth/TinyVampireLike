@@ -26,7 +26,7 @@ public class MenuForm : MonoBehaviour
 
         currentSelection.onValueChanged?.Invoke(true);  // 刚进入界面就触发事件  
         // AudioManager.Instance.PlayMusic(mainMenuBGM);  // 播放背景音乐
-        StartCoroutine(AudioManager.Instance.PlayMusic(mainMenuBGM, 0.5f));
+        StartCoroutine(AudioManager.Instance.PlayMusic(mainMenuBGM, 0.3f));
     }
 
     private void OnToggleValueChanged(Toggle toggle){

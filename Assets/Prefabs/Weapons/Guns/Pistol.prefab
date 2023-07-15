@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 538913977
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1852826300, guid: 0104c8bd24f51644a8f581885e021dcf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a72fe507de99fcf43814f95d094cf281, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -215,14 +215,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a11c8f2222e8844b42900b0ee11c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 11400000, guid: 6f26280f84563af43b1389789c63f9dc, type: 2}
   bulletPrefab: {fileID: 5988753799876687129, guid: 2e938def82e97fa4b8203ee2b748bec4, type: 3}
   shellPrefab: {fileID: 5597762272729807094, guid: 7b57d50897121ba45b0bacfe045a75a9, type: 3}
   muzzlePoint: {fileID: 5298971489703819384}
   shellPoint: {fileID: 5298971489271930302}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 16448
   fireAudio:
     audioClip: {fileID: 8300000, guid: be86fb8d074d30245a2e0e1a4aafc965, type: 3}
-    volume: 0.1
+    volume: 0.3

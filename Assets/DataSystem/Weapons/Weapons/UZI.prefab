@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5042834690270957888}
   - component: {fileID: 7083467994215427848}
   m_Layer: 0
-  m_Name: UZI
+  m_Name: Uzi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

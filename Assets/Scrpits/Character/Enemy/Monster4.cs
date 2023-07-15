@@ -10,11 +10,17 @@ public class Monster4 : Enemy
 
     Vector3 targetDirecton;
     float distance;
-    float fireTimer = 3f;
+    float fireTimer;
+
+    WaitForSeconds waitForFireAnim = new WaitForSeconds(0.5f);
+
+    private void OnDisable() {
+        StopAllCoroutines();
+    }
 
     protected void Update() {
         Fire();
-        fireTimer = Mathf.Max(0f, fireTimer - Time.deltaTime);
+        fireTimer -= Time.deltaTime;
     }
 
     protected override void FixedUpdate() {
@@ -42,8 +48,13 @@ public class Monster4 : Enemy
 
     private void Fire() {
         if (fireTimer > 0f || enemyIsDead) return;
+        StartCoroutine(nameof(FireCoroutine));
+    }
+
+    IEnumerator FireCoroutine() {
         fireTimer = fireInterval;
         animator.SetTrigger(String2Num.ATTACK);
+        yield return waitForFireAnim;
         EnemyBullet bullet = PoolManager.Release(bulletPrefab, transform.position, Quaternion.identity).GetComponent<EnemyBullet>();
         bullet.SetSpeed(targetDirecton.normalized);
         bullet.SetDamage(damage);
